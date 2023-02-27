@@ -1,0 +1,7 @@
+digraph {
+	rankdir=LR size=20
+	node [shape=circle]
+	0
+	1
+	1 -> 2 [label="ε"]
+}

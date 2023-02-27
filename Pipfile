@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 compilador = {editable = true, path = "."}
+graphviz = "*"
 
 [dev-packages]
 
