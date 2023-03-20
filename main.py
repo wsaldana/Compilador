@@ -1,6 +1,6 @@
 from src.afn import Thompson
 from src.afd import Subconjuntos, minimize_dfa
-from src.notations import Notations
+from src.notations import Notations, build_tree
 
 
 def run():
@@ -30,6 +30,9 @@ def run():
     print()
     print(mini)
     sub.graph(mini)
+
+    root = build_tree(postfix)
+    root.make_graph()
 
 
 if __name__ == "__main__":
