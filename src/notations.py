@@ -1,35 +1,61 @@
-from utils.printer import print_return
-
-
 class Notations:
-    @classmethod
-    @print_return("POSTFIX")
-    def to_postfix(cls, infix):
-        infix = list(infix)[::-1]
-        opers = []
-        postfix = []
-        prec = {'*': 100, '.': 80, '|': 60, ')': 40, '(': 20}
+    def __init__(self, infix):
+        self.infix = infix
+        self.precedencia = {
+            '*': 3,
+            '+': 3,
+            '?': 3,
+            '.': 2,
+            '|': 1,
+            '(': 0,
+            ')': 0,
+            '': 0
+        }
 
-        while infix:
-            c = infix.pop()
+    def explicit_contact(self):
+        infix = ""
+        for i in range(len(self.infix)):
+            chr = self.infix[i]
+            infix += chr
 
-            if c == '(':
-                opers.append(c)
+            if i < (len(self.infix) - 1):
+                if (
+                    ((chr in ')*+?') or (chr not in '?+()*.|'))
+                    and (self.infix[i + 1] not in '+*?|)')
+                ):
+                    infix += '.'
+        return infix
 
-            elif c == ')':
-                while opers[-1] != '(':
-                    postfix.append(opers.pop())
-                opers.pop()
+    def to_postfix(self):
+        infix = self.explicit_contact()
+        postfix = ""
+        stack = []
 
-            elif c in prec:
-                while opers and prec[c] < prec[opers[-1]]:
-                    postfix.append(opers.pop())
-                opers.append(c)
-
+        for chr in infix:
+            if (chr == '('):
+                stack += chr
+            elif (chr == ')'):
+                while (not (len(stack) < 1) and stack[-1] != '('):
+                    postfix += stack.pop()
+                stack.pop()
+            elif (chr in ['*', '.', '|', '+', '?']):
+                while (not len(stack) < 1):
+                    if self.precedencia[stack[-1]] >= self.precedencia[chr]:
+                        postfix += stack.pop()
+                    else:
+                        break
+                stack.append(chr)
             else:
-                postfix.append(c)
+                postfix += chr
 
-        while opers:
-            postfix.append(opers.pop())
+        while (not (len(stack) < 1)):
+            postfix += stack.pop()
 
-        return ''.join(postfix)
+        return postfix
+
+    def get_alphabet(self, infix):
+        alphabet = []
+        for i in infix:
+            if (i not in '().*+|$?' and i not in alphabet):
+                alphabet.append(i)
+        return sorted(alphabet)
