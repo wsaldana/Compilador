@@ -117,7 +117,7 @@ class Subconjuntos():
         else:
             return "No"
 
-    def graph(self, dfa):
+    def graph(self, dfa, export_name='AFD'):
         g = graphviz.Digraph(comment="AFD")
         g.attr(rankdir='LR')
         for state in dfa.states:
@@ -132,7 +132,7 @@ class Subconjuntos():
         for transicion in dfa.transitions:
             origen, simbolo, destino = transicion.state_i, transicion.label, transicion.state_f
             g.edge(str(origen), str(destino), label=str(simbolo))
-        g.render("renders/AFD", format='png')
+        g.render(f"renders/{export_name}", format='png')
 
 
 def minimize_dfa(dfa):

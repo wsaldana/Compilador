@@ -29,7 +29,7 @@ def run():
     mini = minimize_dfa(dfa)
     print()
     print(mini)
-    sub.graph(mini)
+    sub.graph(mini, export_name='ADF_MIN')
 
     root = build_tree(postfix)
     root.make_graph()

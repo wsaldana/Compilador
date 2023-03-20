@@ -69,40 +69,7 @@ class RegEx:
     def __init__(self, value):
         self.value = value
 
-    def syntax_tree(self):
-        if len(self.value) == 1:
-            # Base case: single character
-            return State(self.value, accepting=True)
-        elif self.value.startswith('(') and self.value.endswith(')'):
-            # Recursive case: expression in parentheses
-            sub_expr = RegEx(self.value[1:-1])
-            return sub_expr.syntax_tree()
-        elif '|' in self.value:
-            # Recursive case: alternation
-            left_expr, right_expr = self.value.split('|', 1)
-            left_sub_expr = RegEx(left_expr)
-            right_sub_expr = RegEx(right_expr)
-            left_state = left_sub_expr.syntax_tree()
-            right_state = right_sub_expr.syntax_tree()
-            start_state = State('start')
-            end_state = State('end', accepting=True)
-            start_state.add_transition('eps', left_state)
-            start_state.add_transition('eps', right_state)
-            left_state.add_transition('eps', end_state)
-            right_state.add_transition('eps', end_state)
-            return start_state
-        else:
-            # Recursive case: concatenation
-            left_expr = RegEx(self.value[0])
-            right_expr = RegEx(self.value[1:])
-            left_state = left_expr.syntax_tree()
-            right_state = right_expr.syntax_tree()
-            left_state.add_transition(right_expr.value[0], right_state)
-            return left_state
-
-    def to_dfa(self):
-        syntax_tree = self.syntax_tree()
-
+    def to_dfa(self, syntax_tree):
         def build_state(state_set):
             name = ''.join(sorted(state_set))
             accepting = any(s.accepting for s in state_set)
