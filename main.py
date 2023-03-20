@@ -1,5 +1,5 @@
 from src.afn import Thompson
-from src.afd import Subconjuntos
+from src.afd import Subconjuntos, minimize_dfa
 from src.notations import Notations
 
 
@@ -25,6 +25,11 @@ def run():
     rs = sub.simulate(w)
     print(f"AFD: {w} {rs} es aceptada")
     print(dfa)
+
+    mini = minimize_dfa(dfa)
+    print()
+    print(mini)
+    sub.graph(mini)
 
 
 if __name__ == "__main__":

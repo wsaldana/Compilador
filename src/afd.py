@@ -133,3 +133,65 @@ class Subconjuntos():
             origen, simbolo, destino = transicion.state_i, transicion.label, transicion.state_f
             g.edge(str(origen), str(destino), label=str(simbolo))
         g.render("renders/AFD", format='png')
+
+
+def minimize_dfa(dfa):
+    final_states = set(dfa.state_f)
+    non_final_states = set(dfa.states) - final_states
+    partitions = [final_states, non_final_states]
+    letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+               'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+
+    while True:
+        new_partitions = []
+        for partition in partitions:
+            new_sub_partitions = {}
+            for state in partition:
+                transition_symbols = set(t.label for t in dfa.transitions if t.state_i == state)
+                sub_partition_key = tuple(sorted([p for p in partitions if p & transition_symbols], key=lambda x: id(x)))
+                if sub_partition_key not in new_sub_partitions:
+                    new_sub_partitions[sub_partition_key] = set()
+                new_sub_partitions[sub_partition_key].add(state)
+            new_partitions.extend(new_sub_partitions.values())
+        if new_partitions == partitions:
+            break
+        partitions = new_partitions
+
+    state_map = {}
+    new_states = []
+    new_initial_state = None
+    new_final_states = set()
+    for i, partition in enumerate(partitions):
+        new_state_name = letters[i]
+        new_states.append(new_state_name)
+        for state in partition:
+            state_map[state] = new_state_name
+            if state == dfa.state_i:
+                new_initial_state = new_state_name
+            if state in dfa.state_f:
+                new_final_states.add(new_state_name)
+    new_transitions = []
+    print("Particiones: ", partitions)
+    for partition in partitions:
+        for label in set(t.label for t in dfa.transitions):
+            transition_map = {}
+            for state in partition:
+                for transition in dfa.transitions:
+                    if transition.state_i == state and transition.label == label:
+                        transition_map[state_map[transition.state_f]] = True
+            if transition_map:
+                new_transitions.append(
+                    Transition(
+                        next(iter(partition)),
+                        label,
+                        next(iter(transition_map)),
+                    )
+                )
+
+    return Automata(
+        new_initial_state,
+        new_final_states,
+        len(new_states),
+        new_transitions,
+        new_states,
+    )
