@@ -1,5 +1,6 @@
 import graphviz
 from src.afn import Transition, Automata
+from src.automata import MyState
 
 
 class Subconjuntos():
@@ -133,6 +134,28 @@ class Subconjuntos():
             origen, simbolo, destino = transicion.state_i, transicion.label, transicion.state_f
             g.edge(str(origen), str(destino), label=str(simbolo))
         g.render(f"renders/{export_name}", format='png')
+
+
+class RegEx:
+    def __init__(self, value):
+        self.value = value
+
+    def to_dfa(self, syntax_tree):
+        def build_state(state_set):
+            name = ''.join(sorted(state_set))
+            accepting = any(s.accepting for s in state_set)
+            transitions = {}
+            for symbol in set(s.transition_symbols() for s in state_set):
+                target = syntax_tree.get_state(
+                    syntax_tree.step(state_set, symbol)
+                )
+                transitions[symbol] = build_state(target)
+            return MyState(name, accepting=accepting, transitions=transitions)
+
+        start_state = build_state(
+            syntax_tree.step(set([syntax_tree.start]), ' ɛ')
+        )
+        return Automata(start_state)
 
 
 def minimize_dfa(dfa):

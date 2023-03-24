@@ -8,7 +8,7 @@ class Notations:
             '*': 3,
             '+': 3,
             '?': 3,
-            '.': 2,
+            'д': 2,
             '|': 1,
             '(': 0,
             ')': 0,
@@ -23,10 +23,10 @@ class Notations:
 
             if i < (len(self.infix) - 1):
                 if (
-                    ((chr in ')*+?') or (chr not in '?+()*.|'))
+                    ((chr in ')*+?') or (chr not in '?+()*д|'))
                     and (self.infix[i + 1] not in '+*?|)')
                 ):
-                    infix += '.'
+                    infix += 'д'
         return infix
 
     def to_postfix(self):
@@ -41,7 +41,7 @@ class Notations:
                 while (not (len(stack) < 1) and stack[-1] != '('):
                     postfix += stack.pop()
                 stack.pop()
-            elif (chr in ['*', '.', '|', '+', '?']):
+            elif (chr in ['*', 'д', '|', '+', '?']):
                 while (not len(stack) < 1):
                     if self.precedencia[stack[-1]] >= self.precedencia[chr]:
                         postfix += stack.pop()
@@ -59,28 +59,9 @@ class Notations:
     def get_alphabet(self, infix):
         alphabet = []
         for i in infix:
-            if (i not in '().*+|$?' and i not in alphabet):
+            if (i not in '()д*+|$?' and i not in alphabet):
                 alphabet.append(i)
         return sorted(alphabet)
-
-
-class RegEx:
-    """Class representing a regular expression"""
-    def __init__(self, value):
-        self.value = value
-
-    def to_dfa(self, syntax_tree):
-        def build_state(state_set):
-            name = ''.join(sorted(state_set))
-            accepting = any(s.accepting for s in state_set)
-            transitions = {}
-            for symbol in set(s.transition_symbols() for s in state_set):
-                target = syntax_tree.get_state(syntax_tree.step(state_set, symbol))
-                transitions[symbol] = build_state(target)
-            return State(name, accepting=accepting, transitions=transitions)
-
-        start_state = build_state(syntax_tree.step(set([syntax_tree.start]), 'eps'))
-        return DFA(start_state)
 
 
 class Node:
@@ -109,7 +90,7 @@ class Node:
 
 def build_tree(postfix):
     stack = []
-    operators = {'*', '.', '|'}
+    operators = {'*', 'д', '|', '+', '?'}
     for char in postfix:
         if char in operators:
             right = stack.pop()

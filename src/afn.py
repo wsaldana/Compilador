@@ -27,7 +27,7 @@ class Thompson():
         for ch in self.postfix:
             if (ch in self.alphabet):
                 self.afn.append(self.label(ch))
-            elif (ch == '.'):
+            elif (ch == 'д'):
                 a = self.afn.pop()
                 b = self.afn.pop()
                 self.afn.append(self.concat(b, a))
