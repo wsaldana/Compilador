@@ -16,39 +16,74 @@ class Yalex:
         expanded = expanded.replace('[\\s\\t\\n]', '(\\s|\\t|\\n)')
         return expanded
 
+    def expand(self, regex):
+        if regex[0] != '[':
+            return regex.replace("['+''-']", "('+'|'-')")
+
+        string = regex[2:-2]
+        if regex[1] == "'":
+            groups = string.split("''")
+            res = ''
+            for group in groups:
+                if "-" in group:
+                    group = '|'.join([
+                        chr(i)
+                        for i in range(ord(group[0]), ord(group[-1]) + 1)
+                    ])
+                res += f"|{group}"
+            return f"({res[1:]})"
+
+        if regex[1] == '"':
+            chars = list(string)
+            stack = []
+            i = 0
+            while len(chars) > 0:
+                char = chars.pop(0)
+                if char == '\\':
+                    stack.append(char + chars.pop(0))
+                else:
+                    stack.append(char)
+                i += 1
+
+            return f"({'|'.join(stack)})"
+
     def read_yalex(self, file, dummy_placeholder=False):
         rule = False
         vars = {}
         infix = ''
+        n_line = 2
         with open(file) as yal:
             for line in yal:
                 if len(line) > 1:
-                    # line = line.replace("'", "").replace('"', '')
-                    tokens = line.split()
-                    if not tokens[0] == "(*":
-                        if tokens[0] == 'let':
-                            value = tokens[3].replace('"', '')
-                            for var in vars.keys():
-                                value = value.replace(var, vars[var])
-                                value = value.replace('s', '+')
-                                value = value.replace('\\+', '\\s')
-                            vars[tokens[1]] = value
-                        if tokens[0] == 'rule':
-                            rule = True
-                            continue
-                        if rule:
-                            pos = not tokens[0] == '|'
-                            token = tokens[0] if pos else tokens[1]
-                            dummy = tokens[3] if pos else tokens[4]
-                            self.dummies.append(dummy)
-                            if dummy_placeholder:
-                                dummy = self.dummy_placeholder_symbol
-                            if token in vars.keys():
-                                dummy_token = f'|(({vars[token]}){dummy})'
-                            else:
-                                dummy_token = f'|(({token}){dummy})'
-                            infix += dummy_token
-        self.infix = self.regex_range(infix[1:])
+                    try:
+                        tokens = line.split()
+                        if not tokens[0] == "(*":
+                            if tokens[0] == 'let':
+                                value = tokens[3]
+                                for var in vars.keys():
+                                    value = value.replace(var, vars[var])
+                                    value = value.replace('\\+', '\\s')
+                                value = self.expand(value)
+                                vars[tokens[1]] = value
+                            if tokens[0] == 'rule':
+                                rule = True
+                                continue
+                            if rule:
+                                pos = not tokens[0] == '|'
+                                token = tokens[0] if pos else tokens[1]
+                                dummy = tokens[3] if pos else tokens[4]
+                                self.dummies.append(dummy)
+                                if dummy_placeholder:
+                                    dummy = self.dummy_placeholder_symbol
+                                if token in vars.keys():
+                                    dummy_token = f'|(({vars[token]}){dummy})'
+                                else:
+                                    dummy_token = f'|(({token}){dummy})'
+                                infix += dummy_token
+                    except:
+                        print(f"ERROR IN LINE {n_line}")
+                n_line += 1
+        self.infix = infix[1:].replace('9)s', '9)+')
         return self.infix
 
     def process_dummies(self, exp):
