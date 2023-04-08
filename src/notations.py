@@ -8,8 +8,9 @@ class Notations:
             '*': 3,
             '+': 3,
             '?': 3,
-            'д': 2,
-            '|': 1,
+            'ю': 3,
+            'д': 1,
+            '|': 2,
             '(': 0,
             ')': 0,
             '': 0
@@ -23,8 +24,8 @@ class Notations:
 
             if i < (len(self.infix) - 1):
                 if (
-                    ((chr in ')*+?') or (chr not in '?+()*д|'))
-                    and (self.infix[i + 1] not in '+*?|)')
+                    ((chr in ')*+?') or (chr not in "?+()*д|\\'"))
+                    and (self.infix[i + 1] not in "+*?|)'")
                 ):
                     infix += 'д'
         return infix
@@ -33,23 +34,29 @@ class Notations:
         infix = self.explicit_contact()
         postfix = ""
         stack = []
+        skip_op = False
 
         for chr in infix:
-            if (chr == '('):
+            if (chr == '(') and not skip_op:
                 stack += chr
-            elif (chr == ')'):
+            elif (chr == ')') and not skip_op:
                 while (not (len(stack) < 1) and stack[-1] != '('):
                     postfix += stack.pop()
                 stack.pop()
-            elif (chr in ['*', 'д', '|', '+', '?']):
+            elif (chr in ['*', 'д', '|', '+', '?', 'ю']) and not skip_op:
                 while (not len(stack) < 1):
                     if self.precedencia[stack[-1]] >= self.precedencia[chr]:
                         postfix += stack.pop()
                     else:
                         break
                 stack.append(chr)
+            elif chr == "'":
+                skip_op = not skip_op
             else:
-                postfix += chr
+                if skip_op:
+                    postfix += f"'{chr}'"
+                else:
+                    postfix += chr
 
         while (not (len(stack) < 1)):
             postfix += stack.pop()
@@ -59,7 +66,7 @@ class Notations:
     def get_alphabet(self, infix):
         alphabet = []
         for i in infix:
-            if (i not in '()д*+|$?' and i not in alphabet):
+            if (i not in '()д*+|$?ю' and i not in alphabet):
                 alphabet.append(i)
         return sorted(alphabet)
 
@@ -90,7 +97,7 @@ class Node:
 
 def build_tree(postfix):
     stack = []
-    operators = {'*', 'д', '|', '+', '?'}
+    operators = ['*', 'д', '|', '+', '?', 'ю']
     for char in postfix:
         if char in operators:
             right = stack.pop()
