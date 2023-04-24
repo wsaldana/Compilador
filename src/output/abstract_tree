@@ -1,0 +1,677 @@
+digraph {
+	<notations.Node object at 0x7f28adb4c7f0> [label="|"]
+	<notations.Node object at 0x7f28adb4c7f0> -> <notations.Node object at 0x7f28adb4c670>
+	<notations.Node object at 0x7f28adb4c670> [label="|"]
+	<notations.Node object at 0x7f28adb4c670> -> <notations.Node object at 0x7f28adb4c4f0>
+	<notations.Node object at 0x7f28adb4c4f0> [label="|"]
+	<notations.Node object at 0x7f28adb4c4f0> -> <notations.Node object at 0x7f28adb4c370>
+	<notations.Node object at 0x7f28adb4c370> [label="|"]
+	<notations.Node object at 0x7f28adb4c370> -> <notations.Node object at 0x7f28adb4c1f0>
+	<notations.Node object at 0x7f28adb4c1f0> [label="|"]
+	<notations.Node object at 0x7f28adb4c1f0> -> <notations.Node object at 0x7f28adb4c070>
+	<notations.Node object at 0x7f28adb4c070> [label="|"]
+	<notations.Node object at 0x7f28adb4c070> -> <notations.Node object at 0x7f28adb4aeb0>
+	<notations.Node object at 0x7f28adb4aeb0> [label="|"]
+	<notations.Node object at 0x7f28adb4aeb0> -> <notations.Node object at 0x7f28adb4ae50>
+	<notations.Node object at 0x7f28adb4ae50> [label="д"]
+	<notations.Node object at 0x7f28adb4ae50> -> <notations.Node object at 0x7f28adb4ad90>
+	<notations.Node object at 0x7f28adb4ad90> [label="д"]
+	<notations.Node object at 0x7f28adb4ad90> -> <notations.Node object at 0x7f28adb4ad30>
+	<notations.Node object at 0x7f28adb4ad30> [label="?"]
+	<notations.Node object at 0x7f28adb4ad30> -> <notations.Node object at 0x7f28adb4acd0>
+	<notations.Node object at 0x7f28adb4acd0> [label="д"]
+	<notations.Node object at 0x7f28adb4acd0> -> <notations.Node object at 0x7f28adb4a310>
+	<notations.Node object at 0x7f28adb4a310> [label="д"]
+	<notations.Node object at 0x7f28adb4a310> -> <notations.Node object at 0x7f28adb4a2b0>
+	<notations.Node object at 0x7f28adb4a2b0> [label="?"]
+	<notations.Node object at 0x7f28adb4a2b0> -> <notations.Node object at 0x7f28adb4a250>
+	<notations.Node object at 0x7f28adb4a250> [label="д"]
+	<notations.Node object at 0x7f28adb4a250> -> <notations.Node object at 0x7f28adb489d0>
+	<notations.Node object at 0x7f28adb489d0> [label="+"]
+	<notations.Node object at 0x7f28adb489d0> -> <notations.Node object at 0x7f28adb48250>
+	<notations.Node object at 0x7f28adb48250> [label="|"]
+	<notations.Node object at 0x7f28adb48250> -> <notations.Node object at 0x7f28adb481f0>
+	<notations.Node object at 0x7f28adb481f0> [label="д"]
+	<notations.Node object at 0x7f28adb481f0> -> <notations.Node object at 0x7f28adb48130>
+	<notations.Node object at 0x7f28adb48130> [label="д"]
+	<notations.Node object at 0x7f28adb48130> -> <notations.Node object at 0x7f28adbb8a30>
+	<notations.Node object at 0x7f28adbb8a30> [label="д"]
+	<notations.Node object at 0x7f28adbb8a30> -> <notations.Node object at 0x7f28adbb8970>
+	<notations.Node object at 0x7f28adbb8970> [label="+"]
+	<notations.Node object at 0x7f28adbb8970> -> <notations.Node object at 0x7f28adbb8910>
+	<notations.Node object at 0x7f28adbb8910> [label="|"]
+	<notations.Node object at 0x7f28adbb8910> -> <notations.Node object at 0x7f28adbb8730>
+	<notations.Node object at 0x7f28adbb8730> [label="|"]
+	<notations.Node object at 0x7f28adbb8730> -> <notations.Node object at 0x7f28adda5340>
+	<notations.Node object at 0x7f28adda5340> [label="\s"]
+	<notations.Node object at 0x7f28adbb8730> -> <notations.Node object at 0x7f28adda53a0>
+	<notations.Node object at 0x7f28adda53a0> [label="\t"]
+	<notations.Node object at 0x7f28adbb8910> -> <notations.Node object at 0x7f28adbb88b0>
+	<notations.Node object at 0x7f28adbb88b0> [label="\n"]
+	<notations.Node object at 0x7f28adbb8a30> -> <notations.Node object at 0x7f28adbb89d0>
+	<notations.Node object at 0x7f28adbb89d0> [label=WHITESPACE]
+	<notations.Node object at 0x7f28adb48130> -> <notations.Node object at 0x7f28adb480d0>
+	<notations.Node object at 0x7f28adb480d0> [label="*"]
+	<notations.Node object at 0x7f28adb480d0> -> <notations.Node object at 0x7f28adbc3190>
+	<notations.Node object at 0x7f28adbc3190> [label="|"]
+	<notations.Node object at 0x7f28adbc3190> -> <notations.Node object at 0x7f28adbc30d0>
+	<notations.Node object at 0x7f28adbc30d0> [label="|"]
+	<notations.Node object at 0x7f28adbc30d0> -> <notations.Node object at 0x7f28adbc2fd0>
+	<notations.Node object at 0x7f28adbc2fd0> [label="|"]
+	<notations.Node object at 0x7f28adbc2fd0> -> <notations.Node object at 0x7f28adbc2f10>
+	<notations.Node object at 0x7f28adbc2f10> [label="|"]
+	<notations.Node object at 0x7f28adbc2f10> -> <notations.Node object at 0x7f28adbc2e50>
+	<notations.Node object at 0x7f28adbc2e50> [label="|"]
+	<notations.Node object at 0x7f28adbc2e50> -> <notations.Node object at 0x7f28adbc2d90>
+	<notations.Node object at 0x7f28adbc2d90> [label="|"]
+	<notations.Node object at 0x7f28adbc2d90> -> <notations.Node object at 0x7f28adbc2cd0>
+	<notations.Node object at 0x7f28adbc2cd0> [label="|"]
+	<notations.Node object at 0x7f28adbc2cd0> -> <notations.Node object at 0x7f28adbc2c10>
+	<notations.Node object at 0x7f28adbc2c10> [label="|"]
+	<notations.Node object at 0x7f28adbc2c10> -> <notations.Node object at 0x7f28adbc2b50>
+	<notations.Node object at 0x7f28adbc2b50> [label="|"]
+	<notations.Node object at 0x7f28adbc2b50> -> <notations.Node object at 0x7f28adbc2a90>
+	<notations.Node object at 0x7f28adbc2a90> [label="|"]
+	<notations.Node object at 0x7f28adbc2a90> -> <notations.Node object at 0x7f28adbc29d0>
+	<notations.Node object at 0x7f28adbc29d0> [label="|"]
+	<notations.Node object at 0x7f28adbc29d0> -> <notations.Node object at 0x7f28adbc2910>
+	<notations.Node object at 0x7f28adbc2910> [label="|"]
+	<notations.Node object at 0x7f28adbc2910> -> <notations.Node object at 0x7f28adbc2850>
+	<notations.Node object at 0x7f28adbc2850> [label="|"]
+	<notations.Node object at 0x7f28adbc2850> -> <notations.Node object at 0x7f28adbc2790>
+	<notations.Node object at 0x7f28adbc2790> [label="|"]
+	<notations.Node object at 0x7f28adbc2790> -> <notations.Node object at 0x7f28adbc26d0>
+	<notations.Node object at 0x7f28adbc26d0> [label="|"]
+	<notations.Node object at 0x7f28adbc26d0> -> <notations.Node object at 0x7f28adbc2610>
+	<notations.Node object at 0x7f28adbc2610> [label="|"]
+	<notations.Node object at 0x7f28adbc2610> -> <notations.Node object at 0x7f28adbc2550>
+	<notations.Node object at 0x7f28adbc2550> [label="|"]
+	<notations.Node object at 0x7f28adbc2550> -> <notations.Node object at 0x7f28adbc2490>
+	<notations.Node object at 0x7f28adbc2490> [label="|"]
+	<notations.Node object at 0x7f28adbc2490> -> <notations.Node object at 0x7f28adbc23d0>
+	<notations.Node object at 0x7f28adbc23d0> [label="|"]
+	<notations.Node object at 0x7f28adbc23d0> -> <notations.Node object at 0x7f28adbc2310>
+	<notations.Node object at 0x7f28adbc2310> [label="|"]
+	<notations.Node object at 0x7f28adbc2310> -> <notations.Node object at 0x7f28adbc2250>
+	<notations.Node object at 0x7f28adbc2250> [label="|"]
+	<notations.Node object at 0x7f28adbc2250> -> <notations.Node object at 0x7f28adbc2190>
+	<notations.Node object at 0x7f28adbc2190> [label="|"]
+	<notations.Node object at 0x7f28adbc2190> -> <notations.Node object at 0x7f28adbc20d0>
+	<notations.Node object at 0x7f28adbc20d0> [label="|"]
+	<notations.Node object at 0x7f28adbc20d0> -> <notations.Node object at 0x7f28adbc0fd0>
+	<notations.Node object at 0x7f28adbc0fd0> [label="|"]
+	<notations.Node object at 0x7f28adbc0fd0> -> <notations.Node object at 0x7f28adbc0f10>
+	<notations.Node object at 0x7f28adbc0f10> [label="|"]
+	<notations.Node object at 0x7f28adbc0f10> -> <notations.Node object at 0x7f28adbc0e50>
+	<notations.Node object at 0x7f28adbc0e50> [label="|"]
+	<notations.Node object at 0x7f28adbc0e50> -> <notations.Node object at 0x7f28adbc0d90>
+	<notations.Node object at 0x7f28adbc0d90> [label="|"]
+	<notations.Node object at 0x7f28adbc0d90> -> <notations.Node object at 0x7f28adbc0cd0>
+	<notations.Node object at 0x7f28adbc0cd0> [label="|"]
+	<notations.Node object at 0x7f28adbc0cd0> -> <notations.Node object at 0x7f28adbc0c10>
+	<notations.Node object at 0x7f28adbc0c10> [label="|"]
+	<notations.Node object at 0x7f28adbc0c10> -> <notations.Node object at 0x7f28adbc0b50>
+	<notations.Node object at 0x7f28adbc0b50> [label="|"]
+	<notations.Node object at 0x7f28adbc0b50> -> <notations.Node object at 0x7f28adbc0a90>
+	<notations.Node object at 0x7f28adbc0a90> [label="|"]
+	<notations.Node object at 0x7f28adbc0a90> -> <notations.Node object at 0x7f28adbc09d0>
+	<notations.Node object at 0x7f28adbc09d0> [label="|"]
+	<notations.Node object at 0x7f28adbc09d0> -> <notations.Node object at 0x7f28adbc0910>
+	<notations.Node object at 0x7f28adbc0910> [label="|"]
+	<notations.Node object at 0x7f28adbc0910> -> <notations.Node object at 0x7f28adbc0850>
+	<notations.Node object at 0x7f28adbc0850> [label="|"]
+	<notations.Node object at 0x7f28adbc0850> -> <notations.Node object at 0x7f28adbc0790>
+	<notations.Node object at 0x7f28adbc0790> [label="|"]
+	<notations.Node object at 0x7f28adbc0790> -> <notations.Node object at 0x7f28adbc06d0>
+	<notations.Node object at 0x7f28adbc06d0> [label="|"]
+	<notations.Node object at 0x7f28adbc06d0> -> <notations.Node object at 0x7f28adbc0610>
+	<notations.Node object at 0x7f28adbc0610> [label="|"]
+	<notations.Node object at 0x7f28adbc0610> -> <notations.Node object at 0x7f28adbc0550>
+	<notations.Node object at 0x7f28adbc0550> [label="|"]
+	<notations.Node object at 0x7f28adbc0550> -> <notations.Node object at 0x7f28adbc0490>
+	<notations.Node object at 0x7f28adbc0490> [label="|"]
+	<notations.Node object at 0x7f28adbc0490> -> <notations.Node object at 0x7f28adbc03d0>
+	<notations.Node object at 0x7f28adbc03d0> [label="|"]
+	<notations.Node object at 0x7f28adbc03d0> -> <notations.Node object at 0x7f28adbc0310>
+	<notations.Node object at 0x7f28adbc0310> [label="|"]
+	<notations.Node object at 0x7f28adbc0310> -> <notations.Node object at 0x7f28adbc0250>
+	<notations.Node object at 0x7f28adbc0250> [label="|"]
+	<notations.Node object at 0x7f28adbc0250> -> <notations.Node object at 0x7f28adbc0190>
+	<notations.Node object at 0x7f28adbc0190> [label="|"]
+	<notations.Node object at 0x7f28adbc0190> -> <notations.Node object at 0x7f28adbc00d0>
+	<notations.Node object at 0x7f28adbc00d0> [label="|"]
+	<notations.Node object at 0x7f28adbc00d0> -> <notations.Node object at 0x7f28adbb8fd0>
+	<notations.Node object at 0x7f28adbb8fd0> [label="|"]
+	<notations.Node object at 0x7f28adbb8fd0> -> <notations.Node object at 0x7f28adbb8f10>
+	<notations.Node object at 0x7f28adbb8f10> [label="|"]
+	<notations.Node object at 0x7f28adbb8f10> -> <notations.Node object at 0x7f28adbb8e50>
+	<notations.Node object at 0x7f28adbb8e50> [label="|"]
+	<notations.Node object at 0x7f28adbb8e50> -> <notations.Node object at 0x7f28adbb8d90>
+	<notations.Node object at 0x7f28adbb8d90> [label="|"]
+	<notations.Node object at 0x7f28adbb8d90> -> <notations.Node object at 0x7f28adbb8cd0>
+	<notations.Node object at 0x7f28adbb8cd0> [label="|"]
+	<notations.Node object at 0x7f28adbb8cd0> -> <notations.Node object at 0x7f28adbb8c10>
+	<notations.Node object at 0x7f28adbb8c10> [label="|"]
+	<notations.Node object at 0x7f28adbb8c10> -> <notations.Node object at 0x7f28adbb8b50>
+	<notations.Node object at 0x7f28adbb8b50> [label="|"]
+	<notations.Node object at 0x7f28adbb8b50> -> <notations.Node object at 0x7f28adbb8a90>
+	<notations.Node object at 0x7f28adbb8a90> [label=A]
+	<notations.Node object at 0x7f28adbb8b50> -> <notations.Node object at 0x7f28adbb8af0>
+	<notations.Node object at 0x7f28adbb8af0> [label=B]
+	<notations.Node object at 0x7f28adbb8c10> -> <notations.Node object at 0x7f28adbb8bb0>
+	<notations.Node object at 0x7f28adbb8bb0> [label=C]
+	<notations.Node object at 0x7f28adbb8cd0> -> <notations.Node object at 0x7f28adbb8c70>
+	<notations.Node object at 0x7f28adbb8c70> [label=D]
+	<notations.Node object at 0x7f28adbb8d90> -> <notations.Node object at 0x7f28adbb8d30>
+	<notations.Node object at 0x7f28adbb8d30> [label=E]
+	<notations.Node object at 0x7f28adbb8e50> -> <notations.Node object at 0x7f28adbb8df0>
+	<notations.Node object at 0x7f28adbb8df0> [label=F]
+	<notations.Node object at 0x7f28adbb8f10> -> <notations.Node object at 0x7f28adbb8eb0>
+	<notations.Node object at 0x7f28adbb8eb0> [label=G]
+	<notations.Node object at 0x7f28adbb8fd0> -> <notations.Node object at 0x7f28adbb8f70>
+	<notations.Node object at 0x7f28adbb8f70> [label=H]
+	<notations.Node object at 0x7f28adbc00d0> -> <notations.Node object at 0x7f28adbc0070>
+	<notations.Node object at 0x7f28adbc0070> [label=I]
+	<notations.Node object at 0x7f28adbc0190> -> <notations.Node object at 0x7f28adbc0130>
+	<notations.Node object at 0x7f28adbc0130> [label=J]
+	<notations.Node object at 0x7f28adbc0250> -> <notations.Node object at 0x7f28adbc01f0>
+	<notations.Node object at 0x7f28adbc01f0> [label=K]
+	<notations.Node object at 0x7f28adbc0310> -> <notations.Node object at 0x7f28adbc02b0>
+	<notations.Node object at 0x7f28adbc02b0> [label=L]
+	<notations.Node object at 0x7f28adbc03d0> -> <notations.Node object at 0x7f28adbc0370>
+	<notations.Node object at 0x7f28adbc0370> [label=M]
+	<notations.Node object at 0x7f28adbc0490> -> <notations.Node object at 0x7f28adbc0430>
+	<notations.Node object at 0x7f28adbc0430> [label=N]
+	<notations.Node object at 0x7f28adbc0550> -> <notations.Node object at 0x7f28adbc04f0>
+	<notations.Node object at 0x7f28adbc04f0> [label=O]
+	<notations.Node object at 0x7f28adbc0610> -> <notations.Node object at 0x7f28adbc05b0>
+	<notations.Node object at 0x7f28adbc05b0> [label=P]
+	<notations.Node object at 0x7f28adbc06d0> -> <notations.Node object at 0x7f28adbc0670>
+	<notations.Node object at 0x7f28adbc0670> [label=Q]
+	<notations.Node object at 0x7f28adbc0790> -> <notations.Node object at 0x7f28adbc0730>
+	<notations.Node object at 0x7f28adbc0730> [label=R]
+	<notations.Node object at 0x7f28adbc0850> -> <notations.Node object at 0x7f28adbc07f0>
+	<notations.Node object at 0x7f28adbc07f0> [label=S]
+	<notations.Node object at 0x7f28adbc0910> -> <notations.Node object at 0x7f28adbc08b0>
+	<notations.Node object at 0x7f28adbc08b0> [label=T]
+	<notations.Node object at 0x7f28adbc09d0> -> <notations.Node object at 0x7f28adbc0970>
+	<notations.Node object at 0x7f28adbc0970> [label=U]
+	<notations.Node object at 0x7f28adbc0a90> -> <notations.Node object at 0x7f28adbc0a30>
+	<notations.Node object at 0x7f28adbc0a30> [label=V]
+	<notations.Node object at 0x7f28adbc0b50> -> <notations.Node object at 0x7f28adbc0af0>
+	<notations.Node object at 0x7f28adbc0af0> [label=W]
+	<notations.Node object at 0x7f28adbc0c10> -> <notations.Node object at 0x7f28adbc0bb0>
+	<notations.Node object at 0x7f28adbc0bb0> [label=X]
+	<notations.Node object at 0x7f28adbc0cd0> -> <notations.Node object at 0x7f28adbc0c70>
+	<notations.Node object at 0x7f28adbc0c70> [label=Y]
+	<notations.Node object at 0x7f28adbc0d90> -> <notations.Node object at 0x7f28adbc0d30>
+	<notations.Node object at 0x7f28adbc0d30> [label=Z]
+	<notations.Node object at 0x7f28adbc0e50> -> <notations.Node object at 0x7f28adbc0df0>
+	<notations.Node object at 0x7f28adbc0df0> [label=a]
+	<notations.Node object at 0x7f28adbc0f10> -> <notations.Node object at 0x7f28adbc0eb0>
+	<notations.Node object at 0x7f28adbc0eb0> [label=b]
+	<notations.Node object at 0x7f28adbc0fd0> -> <notations.Node object at 0x7f28adbc0f70>
+	<notations.Node object at 0x7f28adbc0f70> [label=c]
+	<notations.Node object at 0x7f28adbc20d0> -> <notations.Node object at 0x7f28adbc2070>
+	<notations.Node object at 0x7f28adbc2070> [label=d]
+	<notations.Node object at 0x7f28adbc2190> -> <notations.Node object at 0x7f28adbc2130>
+	<notations.Node object at 0x7f28adbc2130> [label=e]
+	<notations.Node object at 0x7f28adbc2250> -> <notations.Node object at 0x7f28adbc21f0>
+	<notations.Node object at 0x7f28adbc21f0> [label=f]
+	<notations.Node object at 0x7f28adbc2310> -> <notations.Node object at 0x7f28adbc22b0>
+	<notations.Node object at 0x7f28adbc22b0> [label=g]
+	<notations.Node object at 0x7f28adbc23d0> -> <notations.Node object at 0x7f28adbc2370>
+	<notations.Node object at 0x7f28adbc2370> [label=h]
+	<notations.Node object at 0x7f28adbc2490> -> <notations.Node object at 0x7f28adbc2430>
+	<notations.Node object at 0x7f28adbc2430> [label=i]
+	<notations.Node object at 0x7f28adbc2550> -> <notations.Node object at 0x7f28adbc24f0>
+	<notations.Node object at 0x7f28adbc24f0> [label=j]
+	<notations.Node object at 0x7f28adbc2610> -> <notations.Node object at 0x7f28adbc25b0>
+	<notations.Node object at 0x7f28adbc25b0> [label=k]
+	<notations.Node object at 0x7f28adbc26d0> -> <notations.Node object at 0x7f28adbc2670>
+	<notations.Node object at 0x7f28adbc2670> [label=l]
+	<notations.Node object at 0x7f28adbc2790> -> <notations.Node object at 0x7f28adbc2730>
+	<notations.Node object at 0x7f28adbc2730> [label=m]
+	<notations.Node object at 0x7f28adbc2850> -> <notations.Node object at 0x7f28adbc27f0>
+	<notations.Node object at 0x7f28adbc27f0> [label=n]
+	<notations.Node object at 0x7f28adbc2910> -> <notations.Node object at 0x7f28adbc28b0>
+	<notations.Node object at 0x7f28adbc28b0> [label=o]
+	<notations.Node object at 0x7f28adbc29d0> -> <notations.Node object at 0x7f28adbc2970>
+	<notations.Node object at 0x7f28adbc2970> [label=p]
+	<notations.Node object at 0x7f28adbc2a90> -> <notations.Node object at 0x7f28adbc2a30>
+	<notations.Node object at 0x7f28adbc2a30> [label=q]
+	<notations.Node object at 0x7f28adbc2b50> -> <notations.Node object at 0x7f28adbc2af0>
+	<notations.Node object at 0x7f28adbc2af0> [label=r]
+	<notations.Node object at 0x7f28adbc2c10> -> <notations.Node object at 0x7f28adbc2bb0>
+	<notations.Node object at 0x7f28adbc2bb0> [label=s]
+	<notations.Node object at 0x7f28adbc2cd0> -> <notations.Node object at 0x7f28adbc2c70>
+	<notations.Node object at 0x7f28adbc2c70> [label=t]
+	<notations.Node object at 0x7f28adbc2d90> -> <notations.Node object at 0x7f28adbc2d30>
+	<notations.Node object at 0x7f28adbc2d30> [label=u]
+	<notations.Node object at 0x7f28adbc2e50> -> <notations.Node object at 0x7f28adbc2df0>
+	<notations.Node object at 0x7f28adbc2df0> [label=v]
+	<notations.Node object at 0x7f28adbc2f10> -> <notations.Node object at 0x7f28adbc2eb0>
+	<notations.Node object at 0x7f28adbc2eb0> [label=w]
+	<notations.Node object at 0x7f28adbc2fd0> -> <notations.Node object at 0x7f28adbc2f70>
+	<notations.Node object at 0x7f28adbc2f70> [label=x]
+	<notations.Node object at 0x7f28adbc30d0> -> <notations.Node object at 0x7f28adbc3070>
+	<notations.Node object at 0x7f28adbc3070> [label=y]
+	<notations.Node object at 0x7f28adbc3190> -> <notations.Node object at 0x7f28adbc3130>
+	<notations.Node object at 0x7f28adbc3130> [label=z]
+	<notations.Node object at 0x7f28adb480d0> -> <notations.Node object at 0x7f28adb48070>
+	<notations.Node object at 0x7f28adb48070> [label="|"]
+	<notations.Node object at 0x7f28adb48070> -> <notations.Node object at 0x7f28adbc78b0>
+	<notations.Node object at 0x7f28adbc78b0> [label="|"]
+	<notations.Node object at 0x7f28adbc78b0> -> <notations.Node object at 0x7f28adbc77f0>
+	<notations.Node object at 0x7f28adbc77f0> [label="|"]
+	<notations.Node object at 0x7f28adbc77f0> -> <notations.Node object at 0x7f28adbc7730>
+	<notations.Node object at 0x7f28adbc7730> [label="|"]
+	<notations.Node object at 0x7f28adbc7730> -> <notations.Node object at 0x7f28adbc7670>
+	<notations.Node object at 0x7f28adbc7670> [label="|"]
+	<notations.Node object at 0x7f28adbc7670> -> <notations.Node object at 0x7f28adbc75b0>
+	<notations.Node object at 0x7f28adbc75b0> [label="|"]
+	<notations.Node object at 0x7f28adbc75b0> -> <notations.Node object at 0x7f28adbc74f0>
+	<notations.Node object at 0x7f28adbc74f0> [label="|"]
+	<notations.Node object at 0x7f28adbc74f0> -> <notations.Node object at 0x7f28adbc7430>
+	<notations.Node object at 0x7f28adbc7430> [label="|"]
+	<notations.Node object at 0x7f28adbc7430> -> <notations.Node object at 0x7f28adbc7370>
+	<notations.Node object at 0x7f28adbc7370> [label="|"]
+	<notations.Node object at 0x7f28adbc7370> -> <notations.Node object at 0x7f28adbc72b0>
+	<notations.Node object at 0x7f28adbc72b0> [label="|"]
+	<notations.Node object at 0x7f28adbc72b0> -> <notations.Node object at 0x7f28adbc71f0>
+	<notations.Node object at 0x7f28adbc71f0> [label="|"]
+	<notations.Node object at 0x7f28adbc71f0> -> <notations.Node object at 0x7f28adbc7130>
+	<notations.Node object at 0x7f28adbc7130> [label="|"]
+	<notations.Node object at 0x7f28adbc7130> -> <notations.Node object at 0x7f28adbc7070>
+	<notations.Node object at 0x7f28adbc7070> [label="|"]
+	<notations.Node object at 0x7f28adbc7070> -> <notations.Node object at 0x7f28adbc5f70>
+	<notations.Node object at 0x7f28adbc5f70> [label="|"]
+	<notations.Node object at 0x7f28adbc5f70> -> <notations.Node object at 0x7f28adbc5eb0>
+	<notations.Node object at 0x7f28adbc5eb0> [label="|"]
+	<notations.Node object at 0x7f28adbc5eb0> -> <notations.Node object at 0x7f28adbc5df0>
+	<notations.Node object at 0x7f28adbc5df0> [label="|"]
+	<notations.Node object at 0x7f28adbc5df0> -> <notations.Node object at 0x7f28adbc5d30>
+	<notations.Node object at 0x7f28adbc5d30> [label="|"]
+	<notations.Node object at 0x7f28adbc5d30> -> <notations.Node object at 0x7f28adbc5c70>
+	<notations.Node object at 0x7f28adbc5c70> [label="|"]
+	<notations.Node object at 0x7f28adbc5c70> -> <notations.Node object at 0x7f28adbc5bb0>
+	<notations.Node object at 0x7f28adbc5bb0> [label="|"]
+	<notations.Node object at 0x7f28adbc5bb0> -> <notations.Node object at 0x7f28adbc5af0>
+	<notations.Node object at 0x7f28adbc5af0> [label="|"]
+	<notations.Node object at 0x7f28adbc5af0> -> <notations.Node object at 0x7f28adbc5a30>
+	<notations.Node object at 0x7f28adbc5a30> [label="|"]
+	<notations.Node object at 0x7f28adbc5a30> -> <notations.Node object at 0x7f28adbc5970>
+	<notations.Node object at 0x7f28adbc5970> [label="|"]
+	<notations.Node object at 0x7f28adbc5970> -> <notations.Node object at 0x7f28adbc58b0>
+	<notations.Node object at 0x7f28adbc58b0> [label="|"]
+	<notations.Node object at 0x7f28adbc58b0> -> <notations.Node object at 0x7f28adbc57f0>
+	<notations.Node object at 0x7f28adbc57f0> [label="|"]
+	<notations.Node object at 0x7f28adbc57f0> -> <notations.Node object at 0x7f28adbc5730>
+	<notations.Node object at 0x7f28adbc5730> [label="|"]
+	<notations.Node object at 0x7f28adbc5730> -> <notations.Node object at 0x7f28adbc5670>
+	<notations.Node object at 0x7f28adbc5670> [label="|"]
+	<notations.Node object at 0x7f28adbc5670> -> <notations.Node object at 0x7f28adbc55b0>
+	<notations.Node object at 0x7f28adbc55b0> [label="|"]
+	<notations.Node object at 0x7f28adbc55b0> -> <notations.Node object at 0x7f28adbc54f0>
+	<notations.Node object at 0x7f28adbc54f0> [label="|"]
+	<notations.Node object at 0x7f28adbc54f0> -> <notations.Node object at 0x7f28adbc5430>
+	<notations.Node object at 0x7f28adbc5430> [label="|"]
+	<notations.Node object at 0x7f28adbc5430> -> <notations.Node object at 0x7f28adbc5370>
+	<notations.Node object at 0x7f28adbc5370> [label="|"]
+	<notations.Node object at 0x7f28adbc5370> -> <notations.Node object at 0x7f28adbc52b0>
+	<notations.Node object at 0x7f28adbc52b0> [label="|"]
+	<notations.Node object at 0x7f28adbc52b0> -> <notations.Node object at 0x7f28adbc51f0>
+	<notations.Node object at 0x7f28adbc51f0> [label="|"]
+	<notations.Node object at 0x7f28adbc51f0> -> <notations.Node object at 0x7f28adbc5130>
+	<notations.Node object at 0x7f28adbc5130> [label="|"]
+	<notations.Node object at 0x7f28adbc5130> -> <notations.Node object at 0x7f28adbc5070>
+	<notations.Node object at 0x7f28adbc5070> [label="|"]
+	<notations.Node object at 0x7f28adbc5070> -> <notations.Node object at 0x7f28adbc3f70>
+	<notations.Node object at 0x7f28adbc3f70> [label="|"]
+	<notations.Node object at 0x7f28adbc3f70> -> <notations.Node object at 0x7f28adbc3eb0>
+	<notations.Node object at 0x7f28adbc3eb0> [label="|"]
+	<notations.Node object at 0x7f28adbc3eb0> -> <notations.Node object at 0x7f28adbc3df0>
+	<notations.Node object at 0x7f28adbc3df0> [label="|"]
+	<notations.Node object at 0x7f28adbc3df0> -> <notations.Node object at 0x7f28adbc3d30>
+	<notations.Node object at 0x7f28adbc3d30> [label="|"]
+	<notations.Node object at 0x7f28adbc3d30> -> <notations.Node object at 0x7f28adbc3c70>
+	<notations.Node object at 0x7f28adbc3c70> [label="|"]
+	<notations.Node object at 0x7f28adbc3c70> -> <notations.Node object at 0x7f28adbc3bb0>
+	<notations.Node object at 0x7f28adbc3bb0> [label="|"]
+	<notations.Node object at 0x7f28adbc3bb0> -> <notations.Node object at 0x7f28adbc3af0>
+	<notations.Node object at 0x7f28adbc3af0> [label="|"]
+	<notations.Node object at 0x7f28adbc3af0> -> <notations.Node object at 0x7f28adbc3a30>
+	<notations.Node object at 0x7f28adbc3a30> [label="|"]
+	<notations.Node object at 0x7f28adbc3a30> -> <notations.Node object at 0x7f28adbc3970>
+	<notations.Node object at 0x7f28adbc3970> [label="|"]
+	<notations.Node object at 0x7f28adbc3970> -> <notations.Node object at 0x7f28adbc38b0>
+	<notations.Node object at 0x7f28adbc38b0> [label="|"]
+	<notations.Node object at 0x7f28adbc38b0> -> <notations.Node object at 0x7f28adbc37f0>
+	<notations.Node object at 0x7f28adbc37f0> [label="|"]
+	<notations.Node object at 0x7f28adbc37f0> -> <notations.Node object at 0x7f28adbc3730>
+	<notations.Node object at 0x7f28adbc3730> [label="|"]
+	<notations.Node object at 0x7f28adbc3730> -> <notations.Node object at 0x7f28adbc3670>
+	<notations.Node object at 0x7f28adbc3670> [label="|"]
+	<notations.Node object at 0x7f28adbc3670> -> <notations.Node object at 0x7f28adbc35b0>
+	<notations.Node object at 0x7f28adbc35b0> [label="|"]
+	<notations.Node object at 0x7f28adbc35b0> -> <notations.Node object at 0x7f28adbc34f0>
+	<notations.Node object at 0x7f28adbc34f0> [label="|"]
+	<notations.Node object at 0x7f28adbc34f0> -> <notations.Node object at 0x7f28adbc3430>
+	<notations.Node object at 0x7f28adbc3430> [label="|"]
+	<notations.Node object at 0x7f28adbc3430> -> <notations.Node object at 0x7f28adbc3370>
+	<notations.Node object at 0x7f28adbc3370> [label="|"]
+	<notations.Node object at 0x7f28adbc3370> -> <notations.Node object at 0x7f28adbc32b0>
+	<notations.Node object at 0x7f28adbc32b0> [label="|"]
+	<notations.Node object at 0x7f28adbc32b0> -> <notations.Node object at 0x7f28adbc31f0>
+	<notations.Node object at 0x7f28adbc31f0> [label=A]
+	<notations.Node object at 0x7f28adbc32b0> -> <notations.Node object at 0x7f28adbc3250>
+	<notations.Node object at 0x7f28adbc3250> [label=B]
+	<notations.Node object at 0x7f28adbc3370> -> <notations.Node object at 0x7f28adbc3310>
+	<notations.Node object at 0x7f28adbc3310> [label=C]
+	<notations.Node object at 0x7f28adbc3430> -> <notations.Node object at 0x7f28adbc33d0>
+	<notations.Node object at 0x7f28adbc33d0> [label=D]
+	<notations.Node object at 0x7f28adbc34f0> -> <notations.Node object at 0x7f28adbc3490>
+	<notations.Node object at 0x7f28adbc3490> [label=E]
+	<notations.Node object at 0x7f28adbc35b0> -> <notations.Node object at 0x7f28adbc3550>
+	<notations.Node object at 0x7f28adbc3550> [label=F]
+	<notations.Node object at 0x7f28adbc3670> -> <notations.Node object at 0x7f28adbc3610>
+	<notations.Node object at 0x7f28adbc3610> [label=G]
+	<notations.Node object at 0x7f28adbc3730> -> <notations.Node object at 0x7f28adbc36d0>
+	<notations.Node object at 0x7f28adbc36d0> [label=H]
+	<notations.Node object at 0x7f28adbc37f0> -> <notations.Node object at 0x7f28adbc3790>
+	<notations.Node object at 0x7f28adbc3790> [label=I]
+	<notations.Node object at 0x7f28adbc38b0> -> <notations.Node object at 0x7f28adbc3850>
+	<notations.Node object at 0x7f28adbc3850> [label=J]
+	<notations.Node object at 0x7f28adbc3970> -> <notations.Node object at 0x7f28adbc3910>
+	<notations.Node object at 0x7f28adbc3910> [label=K]
+	<notations.Node object at 0x7f28adbc3a30> -> <notations.Node object at 0x7f28adbc39d0>
+	<notations.Node object at 0x7f28adbc39d0> [label=L]
+	<notations.Node object at 0x7f28adbc3af0> -> <notations.Node object at 0x7f28adbc3a90>
+	<notations.Node object at 0x7f28adbc3a90> [label=M]
+	<notations.Node object at 0x7f28adbc3bb0> -> <notations.Node object at 0x7f28adbc3b50>
+	<notations.Node object at 0x7f28adbc3b50> [label=N]
+	<notations.Node object at 0x7f28adbc3c70> -> <notations.Node object at 0x7f28adbc3c10>
+	<notations.Node object at 0x7f28adbc3c10> [label=O]
+	<notations.Node object at 0x7f28adbc3d30> -> <notations.Node object at 0x7f28adbc3cd0>
+	<notations.Node object at 0x7f28adbc3cd0> [label=P]
+	<notations.Node object at 0x7f28adbc3df0> -> <notations.Node object at 0x7f28adbc3d90>
+	<notations.Node object at 0x7f28adbc3d90> [label=Q]
+	<notations.Node object at 0x7f28adbc3eb0> -> <notations.Node object at 0x7f28adbc3e50>
+	<notations.Node object at 0x7f28adbc3e50> [label=R]
+	<notations.Node object at 0x7f28adbc3f70> -> <notations.Node object at 0x7f28adbc3f10>
+	<notations.Node object at 0x7f28adbc3f10> [label=S]
+	<notations.Node object at 0x7f28adbc5070> -> <notations.Node object at 0x7f28adbc3fd0>
+	<notations.Node object at 0x7f28adbc3fd0> [label=T]
+	<notations.Node object at 0x7f28adbc5130> -> <notations.Node object at 0x7f28adbc50d0>
+	<notations.Node object at 0x7f28adbc50d0> [label=U]
+	<notations.Node object at 0x7f28adbc51f0> -> <notations.Node object at 0x7f28adbc5190>
+	<notations.Node object at 0x7f28adbc5190> [label=V]
+	<notations.Node object at 0x7f28adbc52b0> -> <notations.Node object at 0x7f28adbc5250>
+	<notations.Node object at 0x7f28adbc5250> [label=W]
+	<notations.Node object at 0x7f28adbc5370> -> <notations.Node object at 0x7f28adbc5310>
+	<notations.Node object at 0x7f28adbc5310> [label=X]
+	<notations.Node object at 0x7f28adbc5430> -> <notations.Node object at 0x7f28adbc53d0>
+	<notations.Node object at 0x7f28adbc53d0> [label=Y]
+	<notations.Node object at 0x7f28adbc54f0> -> <notations.Node object at 0x7f28adbc5490>
+	<notations.Node object at 0x7f28adbc5490> [label=Z]
+	<notations.Node object at 0x7f28adbc55b0> -> <notations.Node object at 0x7f28adbc5550>
+	<notations.Node object at 0x7f28adbc5550> [label=a]
+	<notations.Node object at 0x7f28adbc5670> -> <notations.Node object at 0x7f28adbc5610>
+	<notations.Node object at 0x7f28adbc5610> [label=b]
+	<notations.Node object at 0x7f28adbc5730> -> <notations.Node object at 0x7f28adbc56d0>
+	<notations.Node object at 0x7f28adbc56d0> [label=c]
+	<notations.Node object at 0x7f28adbc57f0> -> <notations.Node object at 0x7f28adbc5790>
+	<notations.Node object at 0x7f28adbc5790> [label=d]
+	<notations.Node object at 0x7f28adbc58b0> -> <notations.Node object at 0x7f28adbc5850>
+	<notations.Node object at 0x7f28adbc5850> [label=e]
+	<notations.Node object at 0x7f28adbc5970> -> <notations.Node object at 0x7f28adbc5910>
+	<notations.Node object at 0x7f28adbc5910> [label=f]
+	<notations.Node object at 0x7f28adbc5a30> -> <notations.Node object at 0x7f28adbc59d0>
+	<notations.Node object at 0x7f28adbc59d0> [label=g]
+	<notations.Node object at 0x7f28adbc5af0> -> <notations.Node object at 0x7f28adbc5a90>
+	<notations.Node object at 0x7f28adbc5a90> [label=h]
+	<notations.Node object at 0x7f28adbc5bb0> -> <notations.Node object at 0x7f28adbc5b50>
+	<notations.Node object at 0x7f28adbc5b50> [label=i]
+	<notations.Node object at 0x7f28adbc5c70> -> <notations.Node object at 0x7f28adbc5c10>
+	<notations.Node object at 0x7f28adbc5c10> [label=j]
+	<notations.Node object at 0x7f28adbc5d30> -> <notations.Node object at 0x7f28adbc5cd0>
+	<notations.Node object at 0x7f28adbc5cd0> [label=k]
+	<notations.Node object at 0x7f28adbc5df0> -> <notations.Node object at 0x7f28adbc5d90>
+	<notations.Node object at 0x7f28adbc5d90> [label=l]
+	<notations.Node object at 0x7f28adbc5eb0> -> <notations.Node object at 0x7f28adbc5e50>
+	<notations.Node object at 0x7f28adbc5e50> [label=m]
+	<notations.Node object at 0x7f28adbc5f70> -> <notations.Node object at 0x7f28adbc5f10>
+	<notations.Node object at 0x7f28adbc5f10> [label=n]
+	<notations.Node object at 0x7f28adbc7070> -> <notations.Node object at 0x7f28adbc5fd0>
+	<notations.Node object at 0x7f28adbc5fd0> [label=o]
+	<notations.Node object at 0x7f28adbc7130> -> <notations.Node object at 0x7f28adbc70d0>
+	<notations.Node object at 0x7f28adbc70d0> [label=p]
+	<notations.Node object at 0x7f28adbc71f0> -> <notations.Node object at 0x7f28adbc7190>
+	<notations.Node object at 0x7f28adbc7190> [label=q]
+	<notations.Node object at 0x7f28adbc72b0> -> <notations.Node object at 0x7f28adbc7250>
+	<notations.Node object at 0x7f28adbc7250> [label=r]
+	<notations.Node object at 0x7f28adbc7370> -> <notations.Node object at 0x7f28adbc7310>
+	<notations.Node object at 0x7f28adbc7310> [label=s]
+	<notations.Node object at 0x7f28adbc7430> -> <notations.Node object at 0x7f28adbc73d0>
+	<notations.Node object at 0x7f28adbc73d0> [label=t]
+	<notations.Node object at 0x7f28adbc74f0> -> <notations.Node object at 0x7f28adbc7490>
+	<notations.Node object at 0x7f28adbc7490> [label=u]
+	<notations.Node object at 0x7f28adbc75b0> -> <notations.Node object at 0x7f28adbc7550>
+	<notations.Node object at 0x7f28adbc7550> [label=v]
+	<notations.Node object at 0x7f28adbc7670> -> <notations.Node object at 0x7f28adbc7610>
+	<notations.Node object at 0x7f28adbc7610> [label=w]
+	<notations.Node object at 0x7f28adbc7730> -> <notations.Node object at 0x7f28adbc76d0>
+	<notations.Node object at 0x7f28adbc76d0> [label=x]
+	<notations.Node object at 0x7f28adbc77f0> -> <notations.Node object at 0x7f28adbc7790>
+	<notations.Node object at 0x7f28adbc7790> [label=y]
+	<notations.Node object at 0x7f28adbc78b0> -> <notations.Node object at 0x7f28adbc7850>
+	<notations.Node object at 0x7f28adbc7850> [label=z]
+	<notations.Node object at 0x7f28adb48070> -> <notations.Node object at 0x7f28adbc7fd0>
+	<notations.Node object at 0x7f28adbc7fd0> [label="|"]
+	<notations.Node object at 0x7f28adbc7fd0> -> <notations.Node object at 0x7f28adbc7f10>
+	<notations.Node object at 0x7f28adbc7f10> [label="|"]
+	<notations.Node object at 0x7f28adbc7f10> -> <notations.Node object at 0x7f28adbc7e50>
+	<notations.Node object at 0x7f28adbc7e50> [label="|"]
+	<notations.Node object at 0x7f28adbc7e50> -> <notations.Node object at 0x7f28adbc7d90>
+	<notations.Node object at 0x7f28adbc7d90> [label="|"]
+	<notations.Node object at 0x7f28adbc7d90> -> <notations.Node object at 0x7f28adbc7cd0>
+	<notations.Node object at 0x7f28adbc7cd0> [label="|"]
+	<notations.Node object at 0x7f28adbc7cd0> -> <notations.Node object at 0x7f28adbc7c10>
+	<notations.Node object at 0x7f28adbc7c10> [label="|"]
+	<notations.Node object at 0x7f28adbc7c10> -> <notations.Node object at 0x7f28adbc7b50>
+	<notations.Node object at 0x7f28adbc7b50> [label="|"]
+	<notations.Node object at 0x7f28adbc7b50> -> <notations.Node object at 0x7f28adbc7a90>
+	<notations.Node object at 0x7f28adbc7a90> [label="|"]
+	<notations.Node object at 0x7f28adbc7a90> -> <notations.Node object at 0x7f28adbc79d0>
+	<notations.Node object at 0x7f28adbc79d0> [label="|"]
+	<notations.Node object at 0x7f28adbc79d0> -> <notations.Node object at 0x7f28adbc7910>
+	<notations.Node object at 0x7f28adbc7910> [label=0]
+	<notations.Node object at 0x7f28adbc79d0> -> <notations.Node object at 0x7f28adbc7970>
+	<notations.Node object at 0x7f28adbc7970> [label=1]
+	<notations.Node object at 0x7f28adbc7a90> -> <notations.Node object at 0x7f28adbc7a30>
+	<notations.Node object at 0x7f28adbc7a30> [label=2]
+	<notations.Node object at 0x7f28adbc7b50> -> <notations.Node object at 0x7f28adbc7af0>
+	<notations.Node object at 0x7f28adbc7af0> [label=3]
+	<notations.Node object at 0x7f28adbc7c10> -> <notations.Node object at 0x7f28adbc7bb0>
+	<notations.Node object at 0x7f28adbc7bb0> [label=4]
+	<notations.Node object at 0x7f28adbc7cd0> -> <notations.Node object at 0x7f28adbc7c70>
+	<notations.Node object at 0x7f28adbc7c70> [label=5]
+	<notations.Node object at 0x7f28adbc7d90> -> <notations.Node object at 0x7f28adbc7d30>
+	<notations.Node object at 0x7f28adbc7d30> [label=6]
+	<notations.Node object at 0x7f28adbc7e50> -> <notations.Node object at 0x7f28adbc7df0>
+	<notations.Node object at 0x7f28adbc7df0> [label=7]
+	<notations.Node object at 0x7f28adbc7f10> -> <notations.Node object at 0x7f28adbc7eb0>
+	<notations.Node object at 0x7f28adbc7eb0> [label=8]
+	<notations.Node object at 0x7f28adbc7fd0> -> <notations.Node object at 0x7f28adbc7f70>
+	<notations.Node object at 0x7f28adbc7f70> [label=9]
+	<notations.Node object at 0x7f28adb481f0> -> <notations.Node object at 0x7f28adb48190>
+	<notations.Node object at 0x7f28adb48190> [label=ID]
+	<notations.Node object at 0x7f28adb489d0> -> <notations.Node object at 0x7f28adb48970>
+	<notations.Node object at 0x7f28adb48970> [label="|"]
+	<notations.Node object at 0x7f28adb48970> -> <notations.Node object at 0x7f28adb488b0>
+	<notations.Node object at 0x7f28adb488b0> [label="|"]
+	<notations.Node object at 0x7f28adb488b0> -> <notations.Node object at 0x7f28adb487f0>
+	<notations.Node object at 0x7f28adb487f0> [label="|"]
+	<notations.Node object at 0x7f28adb487f0> -> <notations.Node object at 0x7f28adb48730>
+	<notations.Node object at 0x7f28adb48730> [label="|"]
+	<notations.Node object at 0x7f28adb48730> -> <notations.Node object at 0x7f28adb48670>
+	<notations.Node object at 0x7f28adb48670> [label="|"]
+	<notations.Node object at 0x7f28adb48670> -> <notations.Node object at 0x7f28adb485b0>
+	<notations.Node object at 0x7f28adb485b0> [label="|"]
+	<notations.Node object at 0x7f28adb485b0> -> <notations.Node object at 0x7f28adb484f0>
+	<notations.Node object at 0x7f28adb484f0> [label="|"]
+	<notations.Node object at 0x7f28adb484f0> -> <notations.Node object at 0x7f28adb48430>
+	<notations.Node object at 0x7f28adb48430> [label="|"]
+	<notations.Node object at 0x7f28adb48430> -> <notations.Node object at 0x7f28adb48370>
+	<notations.Node object at 0x7f28adb48370> [label="|"]
+	<notations.Node object at 0x7f28adb48370> -> <notations.Node object at 0x7f28adb482b0>
+	<notations.Node object at 0x7f28adb482b0> [label=0]
+	<notations.Node object at 0x7f28adb48370> -> <notations.Node object at 0x7f28adb48310>
+	<notations.Node object at 0x7f28adb48310> [label=1]
+	<notations.Node object at 0x7f28adb48430> -> <notations.Node object at 0x7f28adb483d0>
+	<notations.Node object at 0x7f28adb483d0> [label=2]
+	<notations.Node object at 0x7f28adb484f0> -> <notations.Node object at 0x7f28adb48490>
+	<notations.Node object at 0x7f28adb48490> [label=3]
+	<notations.Node object at 0x7f28adb485b0> -> <notations.Node object at 0x7f28adb48550>
+	<notations.Node object at 0x7f28adb48550> [label=4]
+	<notations.Node object at 0x7f28adb48670> -> <notations.Node object at 0x7f28adb48610>
+	<notations.Node object at 0x7f28adb48610> [label=5]
+	<notations.Node object at 0x7f28adb48730> -> <notations.Node object at 0x7f28adb486d0>
+	<notations.Node object at 0x7f28adb486d0> [label=6]
+	<notations.Node object at 0x7f28adb487f0> -> <notations.Node object at 0x7f28adb48790>
+	<notations.Node object at 0x7f28adb48790> [label=7]
+	<notations.Node object at 0x7f28adb488b0> -> <notations.Node object at 0x7f28adb48850>
+	<notations.Node object at 0x7f28adb48850> [label=8]
+	<notations.Node object at 0x7f28adb48970> -> <notations.Node object at 0x7f28adb48910>
+	<notations.Node object at 0x7f28adb48910> [label=9]
+	<notations.Node object at 0x7f28adb4a250> -> <notations.Node object at 0x7f28adb4a1f0>
+	<notations.Node object at 0x7f28adb4a1f0> [label="+"]
+	<notations.Node object at 0x7f28adb4a1f0> -> <notations.Node object at 0x7f28adb48a30>
+	<notations.Node object at 0x7f28adb48a30> [label="."]
+	<notations.Node object at 0x7f28adb4a1f0> -> <notations.Node object at 0x7f28adb4a190>
+	<notations.Node object at 0x7f28adb4a190> [label="|"]
+	<notations.Node object at 0x7f28adb4a190> -> <notations.Node object at 0x7f28adb4a0d0>
+	<notations.Node object at 0x7f28adb4a0d0> [label="|"]
+	<notations.Node object at 0x7f28adb4a0d0> -> <notations.Node object at 0x7f28adb48fd0>
+	<notations.Node object at 0x7f28adb48fd0> [label="|"]
+	<notations.Node object at 0x7f28adb48fd0> -> <notations.Node object at 0x7f28adb48f10>
+	<notations.Node object at 0x7f28adb48f10> [label="|"]
+	<notations.Node object at 0x7f28adb48f10> -> <notations.Node object at 0x7f28adb48e50>
+	<notations.Node object at 0x7f28adb48e50> [label="|"]
+	<notations.Node object at 0x7f28adb48e50> -> <notations.Node object at 0x7f28adb48d90>
+	<notations.Node object at 0x7f28adb48d90> [label="|"]
+	<notations.Node object at 0x7f28adb48d90> -> <notations.Node object at 0x7f28adb48cd0>
+	<notations.Node object at 0x7f28adb48cd0> [label="|"]
+	<notations.Node object at 0x7f28adb48cd0> -> <notations.Node object at 0x7f28adb48c10>
+	<notations.Node object at 0x7f28adb48c10> [label="|"]
+	<notations.Node object at 0x7f28adb48c10> -> <notations.Node object at 0x7f28adb48b50>
+	<notations.Node object at 0x7f28adb48b50> [label="|"]
+	<notations.Node object at 0x7f28adb48b50> -> <notations.Node object at 0x7f28adb48a90>
+	<notations.Node object at 0x7f28adb48a90> [label=0]
+	<notations.Node object at 0x7f28adb48b50> -> <notations.Node object at 0x7f28adb48af0>
+	<notations.Node object at 0x7f28adb48af0> [label=1]
+	<notations.Node object at 0x7f28adb48c10> -> <notations.Node object at 0x7f28adb48bb0>
+	<notations.Node object at 0x7f28adb48bb0> [label=2]
+	<notations.Node object at 0x7f28adb48cd0> -> <notations.Node object at 0x7f28adb48c70>
+	<notations.Node object at 0x7f28adb48c70> [label=3]
+	<notations.Node object at 0x7f28adb48d90> -> <notations.Node object at 0x7f28adb48d30>
+	<notations.Node object at 0x7f28adb48d30> [label=4]
+	<notations.Node object at 0x7f28adb48e50> -> <notations.Node object at 0x7f28adb48df0>
+	<notations.Node object at 0x7f28adb48df0> [label=5]
+	<notations.Node object at 0x7f28adb48f10> -> <notations.Node object at 0x7f28adb48eb0>
+	<notations.Node object at 0x7f28adb48eb0> [label=6]
+	<notations.Node object at 0x7f28adb48fd0> -> <notations.Node object at 0x7f28adb48f70>
+	<notations.Node object at 0x7f28adb48f70> [label=7]
+	<notations.Node object at 0x7f28adb4a0d0> -> <notations.Node object at 0x7f28adb4a070>
+	<notations.Node object at 0x7f28adb4a070> [label=8]
+	<notations.Node object at 0x7f28adb4a190> -> <notations.Node object at 0x7f28adb4a130>
+	<notations.Node object at 0x7f28adb4a130> [label=9]
+	<notations.Node object at 0x7f28adb4acd0> -> <notations.Node object at 0x7f28adb4ac70>
+	<notations.Node object at 0x7f28adb4ac70> [label="+"]
+	<notations.Node object at 0x7f28adb4ac70> -> <notations.Node object at 0x7f28adb4a4f0>
+	<notations.Node object at 0x7f28adb4a4f0> [label="?"]
+	<notations.Node object at 0x7f28adb4a4f0> -> <notations.Node object at 0x7f28adb4a370>
+	<notations.Node object at 0x7f28adb4a370> [label="'E'"]
+	<notations.Node object at 0x7f28adb4a4f0> -> <notations.Node object at 0x7f28adb4a490>
+	<notations.Node object at 0x7f28adb4a490> [label="|"]
+	<notations.Node object at 0x7f28adb4a490> -> <notations.Node object at 0x7f28adb4a3d0>
+	<notations.Node object at 0x7f28adb4a3d0> [label="'+'"]
+	<notations.Node object at 0x7f28adb4a490> -> <notations.Node object at 0x7f28adb4a430>
+	<notations.Node object at 0x7f28adb4a430> [label="'-'"]
+	<notations.Node object at 0x7f28adb4ac70> -> <notations.Node object at 0x7f28adb4ac10>
+	<notations.Node object at 0x7f28adb4ac10> [label="|"]
+	<notations.Node object at 0x7f28adb4ac10> -> <notations.Node object at 0x7f28adb4ab50>
+	<notations.Node object at 0x7f28adb4ab50> [label="|"]
+	<notations.Node object at 0x7f28adb4ab50> -> <notations.Node object at 0x7f28adb4aa90>
+	<notations.Node object at 0x7f28adb4aa90> [label="|"]
+	<notations.Node object at 0x7f28adb4aa90> -> <notations.Node object at 0x7f28adb4a9d0>
+	<notations.Node object at 0x7f28adb4a9d0> [label="|"]
+	<notations.Node object at 0x7f28adb4a9d0> -> <notations.Node object at 0x7f28adb4a910>
+	<notations.Node object at 0x7f28adb4a910> [label="|"]
+	<notations.Node object at 0x7f28adb4a910> -> <notations.Node object at 0x7f28adb4a850>
+	<notations.Node object at 0x7f28adb4a850> [label="|"]
+	<notations.Node object at 0x7f28adb4a850> -> <notations.Node object at 0x7f28adb4a790>
+	<notations.Node object at 0x7f28adb4a790> [label="|"]
+	<notations.Node object at 0x7f28adb4a790> -> <notations.Node object at 0x7f28adb4a6d0>
+	<notations.Node object at 0x7f28adb4a6d0> [label="|"]
+	<notations.Node object at 0x7f28adb4a6d0> -> <notations.Node object at 0x7f28adb4a610>
+	<notations.Node object at 0x7f28adb4a610> [label="|"]
+	<notations.Node object at 0x7f28adb4a610> -> <notations.Node object at 0x7f28adb4a550>
+	<notations.Node object at 0x7f28adb4a550> [label=0]
+	<notations.Node object at 0x7f28adb4a610> -> <notations.Node object at 0x7f28adb4a5b0>
+	<notations.Node object at 0x7f28adb4a5b0> [label=1]
+	<notations.Node object at 0x7f28adb4a6d0> -> <notations.Node object at 0x7f28adb4a670>
+	<notations.Node object at 0x7f28adb4a670> [label=2]
+	<notations.Node object at 0x7f28adb4a790> -> <notations.Node object at 0x7f28adb4a730>
+	<notations.Node object at 0x7f28adb4a730> [label=3]
+	<notations.Node object at 0x7f28adb4a850> -> <notations.Node object at 0x7f28adb4a7f0>
+	<notations.Node object at 0x7f28adb4a7f0> [label=4]
+	<notations.Node object at 0x7f28adb4a910> -> <notations.Node object at 0x7f28adb4a8b0>
+	<notations.Node object at 0x7f28adb4a8b0> [label=5]
+	<notations.Node object at 0x7f28adb4a9d0> -> <notations.Node object at 0x7f28adb4a970>
+	<notations.Node object at 0x7f28adb4a970> [label=6]
+	<notations.Node object at 0x7f28adb4aa90> -> <notations.Node object at 0x7f28adb4aa30>
+	<notations.Node object at 0x7f28adb4aa30> [label=7]
+	<notations.Node object at 0x7f28adb4ab50> -> <notations.Node object at 0x7f28adb4aaf0>
+	<notations.Node object at 0x7f28adb4aaf0> [label=8]
+	<notations.Node object at 0x7f28adb4ac10> -> <notations.Node object at 0x7f28adb4abb0>
+	<notations.Node object at 0x7f28adb4abb0> [label=9]
+	<notations.Node object at 0x7f28adb4ae50> -> <notations.Node object at 0x7f28adb4adf0>
+	<notations.Node object at 0x7f28adb4adf0> [label=NUMBER]
+	<notations.Node object at 0x7f28adb4c070> -> <notations.Node object at 0x7f28adb4afd0>
+	<notations.Node object at 0x7f28adb4afd0> [label="д"]
+	<notations.Node object at 0x7f28adb4afd0> -> <notations.Node object at 0x7f28adb4af10>
+	<notations.Node object at 0x7f28adb4af10> [label="'+'"]
+	<notations.Node object at 0x7f28adb4afd0> -> <notations.Node object at 0x7f28adb4af70>
+	<notations.Node object at 0x7f28adb4af70> [label=PLUS]
+	<notations.Node object at 0x7f28adb4c1f0> -> <notations.Node object at 0x7f28adb4c190>
+	<notations.Node object at 0x7f28adb4c190> [label="д"]
+	<notations.Node object at 0x7f28adb4c190> -> <notations.Node object at 0x7f28adb4c0d0>
+	<notations.Node object at 0x7f28adb4c0d0> [label="'-'"]
+	<notations.Node object at 0x7f28adb4c190> -> <notations.Node object at 0x7f28adb4c130>
+	<notations.Node object at 0x7f28adb4c130> [label=MINUS]
+	<notations.Node object at 0x7f28adb4c370> -> <notations.Node object at 0x7f28adb4c310>
+	<notations.Node object at 0x7f28adb4c310> [label="д"]
+	<notations.Node object at 0x7f28adb4c310> -> <notations.Node object at 0x7f28adb4c250>
+	<notations.Node object at 0x7f28adb4c250> [label="'*'"]
+	<notations.Node object at 0x7f28adb4c310> -> <notations.Node object at 0x7f28adb4c2b0>
+	<notations.Node object at 0x7f28adb4c2b0> [label=TIMES]
+	<notations.Node object at 0x7f28adb4c4f0> -> <notations.Node object at 0x7f28adb4c490>
+	<notations.Node object at 0x7f28adb4c490> [label="д"]
+	<notations.Node object at 0x7f28adb4c490> -> <notations.Node object at 0x7f28adb4c3d0>
+	<notations.Node object at 0x7f28adb4c3d0> [label="'/'"]
+	<notations.Node object at 0x7f28adb4c490> -> <notations.Node object at 0x7f28adb4c430>
+	<notations.Node object at 0x7f28adb4c430> [label=DIV]
+	<notations.Node object at 0x7f28adb4c670> -> <notations.Node object at 0x7f28adb4c610>
+	<notations.Node object at 0x7f28adb4c610> [label="д"]
+	<notations.Node object at 0x7f28adb4c610> -> <notations.Node object at 0x7f28adb4c550>
+	<notations.Node object at 0x7f28adb4c550> [label="'('"]
+	<notations.Node object at 0x7f28adb4c610> -> <notations.Node object at 0x7f28adb4c5b0>
+	<notations.Node object at 0x7f28adb4c5b0> [label=LPAREN]
+	<notations.Node object at 0x7f28adb4c7f0> -> <notations.Node object at 0x7f28adb4c790>
+	<notations.Node object at 0x7f28adb4c790> [label="д"]
+	<notations.Node object at 0x7f28adb4c790> -> <notations.Node object at 0x7f28adb4c6d0>
+	<notations.Node object at 0x7f28adb4c6d0> [label="')'"]
+	<notations.Node object at 0x7f28adb4c790> -> <notations.Node object at 0x7f28adb4c730>
+	<notations.Node object at 0x7f28adb4c730> [label=RPAREN]
+}

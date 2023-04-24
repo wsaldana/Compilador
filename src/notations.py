@@ -81,6 +81,7 @@ class Node:
         dot = graphviz.Digraph()
         self._make_graph(dot, self)
         dot.render("renders/tree", format='png')
+        dot.render("src/output/abstract_tree", format='gv')
         return dot
 
     def _make_graph(self, dot, node):

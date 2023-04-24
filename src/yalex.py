@@ -1,4 +1,5 @@
-from notations import build_tree, Node, Notations
+from notations import build_tree, Notations, Node
+from utils.exceptions import YalexSyntaxError, YalexUnexpectedSymbol
 
 
 class Yalex:
@@ -57,6 +58,8 @@ class Yalex:
                 if len(line) > 1:
                     try:
                         tokens = line.split()
+                        if ("(*" in line and "*)" not in line) or ("*)" in line and "(*" not in line):
+                            raise YalexSyntaxError(line=n_line)
                         if not tokens[0] == "(*":
                             if tokens[0] == 'let':
                                 value = tokens[3]
@@ -65,10 +68,13 @@ class Yalex:
                                     value = value.replace('\\+', '\\s')
                                 value = self.expand(value)
                                 vars[tokens[1]] = value
-                            if tokens[0] == 'rule':
+                            elif tokens[0] == 'rule':
+                                if tokens[1] != 'tokens':
+                                    print("ERROR: ", line)
+                                    raise YalexSyntaxError(line=n_line)
                                 rule = True
                                 continue
-                            if rule:
+                            elif rule:
                                 pos = not tokens[0] == '|'
                                 token = tokens[0] if pos else tokens[1]
                                 dummy = tokens[3] if pos else tokens[4]
@@ -80,8 +86,12 @@ class Yalex:
                                 else:
                                     dummy_token = f'|(({token}){dummy})'
                                 infix += dummy_token
+                            else:
+                                print("ERROR: ", line)
+                                raise YalexUnexpectedSymbol(line=n_line)
                     except:
-                        print(f"ERROR IN LINE {n_line}")
+                        print("ERROR: ", line)
+                        raise YalexSyntaxError(line=n_line)
                 n_line += 1
         self.infix = infix[1:].replace('9)s', '9)+')
         return self.infix
@@ -111,6 +121,8 @@ class Yalex:
 if __name__ == "__main__":
     y = Yalex()
     y.read_yalex('src/yalex/slr-2.yal', True)
+    print(y.infix)
+    print(y.dummies)
     print("Infix:\n", ''.join(y.process_dummies(y.infix)))
 
     postfix = Notations(y.infix).to_postfix()
