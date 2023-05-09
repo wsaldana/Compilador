@@ -30,3 +30,11 @@ class YalexUnexpectedSymbol(Exception):
         else:
             self.message = message
         super().__init__(self.message)
+
+class YaparSyntaxError(Exception):
+    def __init__(self, message="Invalid syntax in yapar", line=None):
+        if line:
+            self.message = f"Invalid syntax in line {line} at yapar"
+        else:
+            self.message = message
+        super().__init__(self.message)

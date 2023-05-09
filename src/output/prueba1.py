@@ -12,7 +12,7 @@ args = parser.parse_args()
 print(args)
 
 # Internal variables
-postfixs = {'WHITESPACE': ' \t|\n|+', 'ID': 'AB|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|AB|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|01|2|3|4|5|6|7|8|9||*д', 'NUMBER': "01|2|3|4|5|6|7|8|9|+.01|2|3|4|5|6|7|8|9|+д?дE'+''-'|?01|2|3|4|5|6|7|8|9|+д?д", 'PLUS': "'+'", 'MINUS': "'-'", 'TIMES': "'*'", 'DIV': "'/'", 'LPAREN': "'('", 'RPAREN': "')'"}
+postfixs = {'WHITESPACE': ' \t|\n|+', 'ID': 'AB|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|AB|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|01|2|3|4|5|6|7|8|9||*д', 'NUMBER': "01|2|3|4|5|6|7|8|9|+'.'01|2|3|4|5|6|7|8|9|+?дE'+''-'|?д01|2|3|4|5|6|7|8|9|+д?д", 'PLUS': "'+'", 'MINUS': "'-'", 'TIMES': "'*'", 'DIV': "'/'", 'LPAREN': "'('", 'RPAREN': "')'"}
 alphabets = {'WHITESPACE': ['\t', '\n', ' '], 'ID': ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'], 'NUMBER': ['+', '-', '.', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'E'], 'PLUS': ['+'], 'MINUS': ['-'], 'TIMES': ['*'], 'DIV': ['/'], 'LPAREN': ['('], 'RPAREN': [')']}
 
 # Create AFNs

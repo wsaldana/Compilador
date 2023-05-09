@@ -64,10 +64,27 @@ class Notations:
         return postfix
 
     def get_alphabet(self, infix):
+        backlash_ops = {'n': '\n', 's': ' ', 't': '\t'}
         alphabet = []
+        skip = False
+        backslash = False
         for i in infix:
-            if (i not in '()д*+|$?ю' and i not in alphabet):
-                alphabet.append(i)
+            if i == "'":
+                if skip:
+                    skip = False
+                    continue
+                skip = True
+                continue
+            if i == "\\":
+                backslash = True
+                continue
+            if ((i not in '()д*+|$?ю') and (i not in alphabet) or (skip)):
+                if backslash:
+                    alphabet.append(backlash_ops[i])
+                    backslash = False
+                else:
+                    alphabet.append(i)
+                
         return sorted(alphabet)
 
 

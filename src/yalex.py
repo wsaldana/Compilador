@@ -7,6 +7,7 @@ class Yalex:
         self.dummies = []
         self.infix = ''
         self.dummy_placeholder_symbol = 'ю'
+        self.reg_tokens = {}
 
     def regex_range(self, string):
         alf = '|'.join([chr(i) for i in range(65, 123) if i not in range(91, 97)])
@@ -18,6 +19,8 @@ class Yalex:
         return expanded
 
     def expand(self, regex):
+        backlash_ops = {'n': '\n', 's': ' ', 't': '\t'}
+
         if regex[0] != '[':
             return regex.replace("['+''-']", "('+'|'-')")
 
@@ -41,7 +44,7 @@ class Yalex:
             while len(chars) > 0:
                 char = chars.pop(0)
                 if char == '\\':
-                    stack.append(char + chars.pop(0))
+                    stack.append(backlash_ops[chars.pop(0)])
                 else:
                     stack.append(char)
                 i += 1
@@ -63,7 +66,8 @@ class Yalex:
                         if not tokens[0] == "(*":
                             if tokens[0] == 'let':
                                 value = tokens[3]
-                                for var in vars.keys():
+                                sorted_keys = sorted(vars.keys(), key=len, reverse=True)
+                                for var in sorted_keys:
                                     value = value.replace(var, vars[var])
                                     value = value.replace('\\+', '\\s')
                                 value = self.expand(value)
@@ -83,8 +87,10 @@ class Yalex:
                                     dummy = self.dummy_placeholder_symbol
                                 if token in vars.keys():
                                     dummy_token = f'|(({vars[token]}){dummy})'
+                                    self.reg_tokens[dummy] = vars[token]
                                 else:
                                     dummy_token = f'|(({token}){dummy})'
+                                    self.reg_tokens[dummy] = token
                                 infix += dummy_token
                             else:
                                 print("ERROR: ", line)
@@ -93,7 +99,7 @@ class Yalex:
                         print("ERROR: ", line)
                         raise YalexSyntaxError(line=n_line)
                 n_line += 1
-        self.infix = infix[1:].replace('9)s', '9)+')
+        self.infix = infix[1:]
         return self.infix
 
     def process_dummies(self, exp):
@@ -117,11 +123,49 @@ class Yalex:
 
         return infix
 
+    def write_lexical_analyzer(self, output_file_name):
+        with open('src/output/lexical_analyzer.txt', 'r') as template:
+            with open(output_file_name, 'w') as new_file:
+                for line in template:
+                    if line.startswith("postfixs ="):
+                        new_line = "postfixs = " + str(self.reg_tokens_to_postfix()) + "\n"
+                        new_file.write(new_line)
+                    elif line.startswith("alphabets ="):
+                        new_line = "alphabets = " + str(self.reg_tokens_alphabet()) + "\n"
+                        new_file.write(new_line)
+                    else:
+                        new_file.write(line)
+
+    def reg_tokens_to_postfix(self):
+        return {
+            k: Notations(v).to_postfix()
+            for k, v in self.reg_tokens.items()
+        }
+
+    def reg_tokens_alphabet(self):
+        return {
+            k: Notations(v).get_alphabet(v)
+            for k, v in self.reg_tokens.items()
+        }
+
 
 if __name__ == "__main__":
     y = Yalex()
-    y.read_yalex('src/yalex/slr-2.yal', True)
-    print(y.infix)
+    y.read_yalex('src/yalex/slr-2.yal')
+    print(y.reg_tokens)
+    print()
+
+    print(y.reg_tokens_to_postfix())
+    print()
+    print(y.reg_tokens_alphabet())
+
+    print()
+
+    y.write_lexical_analyzer("src/output/prueba1.py")
+
+
+
+    '''
     print(y.dummies)
     print("Infix:\n", ''.join(y.process_dummies(y.infix)))
 
@@ -131,3 +175,4 @@ if __name__ == "__main__":
 
     root = build_tree(y.process_dummies(postfix))
     root.make_graph()
+    '''

@@ -24,8 +24,14 @@ class Thompson():
         self.afn = []
 
     def construct(self):
+        skip = False
         for ch in self.postfix:
-            if (ch in self.alphabet):
+            if (ch == "'"):
+                if skip:
+                    skip = False
+                else:
+                    skip = True
+            if (ch in self.alphabet and skip) or (ch in self.alphabet and ch not in 'д|*+?'):
                 self.afn.append(self.label(ch))
             elif (ch == 'д'):
                 a = self.afn.pop()
