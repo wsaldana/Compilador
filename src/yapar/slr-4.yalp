@@ -40,6 +40,8 @@
 %token PLUS
 %token TIMES
 
+%%
+
 p:
     t
 ;

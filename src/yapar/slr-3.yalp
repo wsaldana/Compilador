@@ -11,6 +11,8 @@
 %token WHITESPACE
 IGNORE WHITESPACE
 
+%%
+
 expression:
     term PLUS expression
   | term

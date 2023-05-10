@@ -18,6 +18,27 @@ class Grammar:
         new_nt.productions.append(nt.label)
         self.non_terminals.insert(0, new_nt)
 
+    def shift_closure(self, prod):
+        lst = prod.split()
+        if '.' not in lst:
+            lst.insert(0, '.')
+            return lst
+
+        i = lst.index('.')
+        del lst[i]
+        lst.insert(i+1, '.')
+        return lst
+
+    def closure(self):
+        i = 0
+        for nt in self.non_terminals:
+            j = 0
+            for prod in nt.productions:
+                tks = self.shift_closure(prod)
+                self.non_terminals[i].productions[j] = ' '.join(tks)
+                j += 1
+            i += 1
+
     def append(self, non_terminal):
         self.non_terminals.append(non_terminal)
 
@@ -166,7 +187,7 @@ class Yapar:
         done = []
         for nt in grammar.non_terminals:
             for prod in nt.productions:
-                tks = self.shift_closure(prod)
+                tks = prod.split()
                 index = tks.index('.')
                 if index == len(tks)-1:
                     pass
@@ -181,13 +202,14 @@ class Yapar:
                         for prod in nt.productions:
                             if edge in prod:
                                 tks1 = self.shift_closure(prod)
-                                item_collection.append(' '.join(tks1)[1:])
+                                item_collection.append(' '.join(tks1))
                     dot.node(str(item_collection), str(item_collection))
                     dot.edge(str(grammar), str(item_collection), label=edge)
 
     def build_lr0(self):
         dot = graphviz.Digraph()
         self.grammar.extend()
+        self.grammar.closure()
         dot.node(str(self.grammar), str(self.grammar))
         self.closure(dot, self.grammar)
         dot.render("renders/lr0", format='png')
