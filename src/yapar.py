@@ -1,14 +1,22 @@
 from utils.exceptions import YaparSyntaxError
+import graphviz
 
 
 class Grammar:
-    def __init__(self):
+    def __init__(self, label=''):
         self.non_terminals = []
+        self.label = label
 
     def __getitem__(self, key):
         for nt in self.non_terminals:
             if nt.label == key:
                 return nt
+
+    def extend(self):
+        nt = self.non_terminals[0]
+        new_nt = NonTerminal("S'")
+        new_nt.productions.append(nt.label)
+        self.non_terminals.insert(0, new_nt)
 
     def append(self, non_terminal):
         self.non_terminals.append(non_terminal)
@@ -21,6 +29,9 @@ class Grammar:
         for nt in self.non_terminals:
             string += str(nt) + '\n'
         return string
+
+    def __str__(self) -> str:
+        return self.__repr__()
 
     def keys(self):
         return [nt.label for nt in self.non_terminals]
@@ -140,9 +151,46 @@ class Yapar:
                     follows[label] = follows[label].union(follows[nt.label])
         return follows
 
-    def closure(self):
-        labels = self.grammar.keys()
-        follows = {k: set() for k in labels}
+    def shift_closure(self, prod):
+        lst = prod.split()
+        if '.' not in lst:
+            lst.insert(0, '.')
+            return lst
+
+        i = lst.index('.')
+        del lst[i]
+        lst.insert(i+1, '.')
+        return lst
+
+    def closure(self, dot, grammar):
+        done = []
+        for nt in grammar.non_terminals:
+            for prod in nt.productions:
+                tks = self.shift_closure(prod)
+                index = tks.index('.')
+                if index == len(tks)-1:
+                    pass
+                else:
+                    edge = tks[index + 1]
+                    if edge in done:
+                        continue
+                    else:
+                        done.append(edge)
+                    item_collection = Grammar()
+                    for nt in grammar.non_terminals:
+                        for prod in nt.productions:
+                            if edge in prod:
+                                tks1 = self.shift_closure(prod)
+                                item_collection.append(' '.join(tks1)[1:])
+                    dot.node(str(item_collection), str(item_collection))
+                    dot.edge(str(grammar), str(item_collection), label=edge)
+
+    def build_lr0(self):
+        dot = graphviz.Digraph()
+        self.grammar.extend()
+        dot.node(str(self.grammar), str(self.grammar))
+        self.closure(dot, self.grammar)
+        dot.render("renders/lr0", format='png')
 
 
 if __name__ == "__main__":
@@ -159,3 +207,5 @@ if __name__ == "__main__":
     print("FIRST(F) = ", y.first('F'))
     print()
     print(y.follow())
+    print()
+    y.build_lr0()
