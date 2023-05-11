@@ -260,15 +260,14 @@ class Yapar:
 if __name__ == "__main__":
     tokens = {'WHITESPACE': ['\t', '\n', ' '], 'ID': ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'], 'NUMBER': ['+', '-', '.', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'E'], 'PLUS': ['+'], 'MINUS': ['-'], 'TIMES': ['*'], 'DIV': ['/'], 'LPAREN': ['('], 'RPAREN': [')']}
     y = Yapar(tokens)
-    y.read('src/yapar/slr-2.yalp')
+    y.read('src/yapar/slr-3.yalp')
     print(y.grammar)
     print()
     print(y.tokens)
     print(list(y.yalex_tokens.keys()))
     print()
-    print("FIRST(E) = ", y.first('E'))
-    print("FIRST(T) = ", y.first('T'))
-    print("FIRST(F) = ", y.first('F'))
+    for nt in [_nt.label for _nt in y.grammar.non_terminals]:
+        print(f"FIRST({nt}) = {y.first(nt)}")
     print()
     print(y.follow())
     print()
