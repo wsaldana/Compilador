@@ -1,9 +1,10 @@
 from utils.exceptions import YaparSyntaxError
 import graphviz
+import uuid
 
 
 class Grammar:
-    def __init__(self, label=''):
+    def __init__(self, label='0'):
         self.non_terminals = []
         self.label = label
 
@@ -198,6 +199,10 @@ class Yapar:
                     else:
                         done.append(edge)
                     item_collection = Grammar()
+                    # Jalar las producciones que tengan edge (la produccion antes del punto) dentro
+                    node_id = str(uuid.uuid4())
+                    dot.node(node_id, label="x")
+                    dot.edge(grammar.label, node_id, label=edge)
                     for nt in grammar.non_terminals:
                         for prod in nt.productions:
                             if edge in prod:
@@ -205,14 +210,13 @@ class Yapar:
                                 new_nt = NonTerminal(label=nt.label)
                                 new_nt.productions.append(' '.join(tks1))
                                 item_collection.append(new_nt)
-                    dot.node(str(item_collection), str(item_collection))
-                    dot.edge(str(grammar), str(item_collection), label=edge)
+                    dot.node(node_id, label=str(item_collection))
 
     def build_lr0(self):
         dot = graphviz.Digraph()
         self.grammar.extend()
         self.grammar.closure()
-        dot.node(str(self.grammar), str(self.grammar))
+        dot.node(self.grammar.label, label=str(self.grammar))
         self.closure(dot, self.grammar)
         dot.render("renders/lr0", format='png')
 
