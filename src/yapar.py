@@ -8,6 +8,7 @@ class Grammar:
         self.non_terminals = []
         self.label = label
         self._edges = []
+        self.children = []
 
     def __getitem__(self, key):
         for nt in self.non_terminals:
@@ -81,7 +82,7 @@ class Yapar:
         self.grammar = Grammar()
         self.ignored = []
         self.yalex_tokens = yalex_tokens
-        self.nodes = {}
+        self.connected = []
 
     def read(self, file_name):
         prods = False
@@ -215,15 +216,26 @@ class Yapar:
                                     grammar._edges.append(edge)
                                     self.closure(dot, item_collection)
 
-                    dot.node(node_id, label=str(item_collection))
-                    dot.edge(grammar.label, node_id, label=edge)
+                    #dot.node(node_id, label=str(item_collection))
+                    #dot.edge(grammar.label, node_id, label=edge)
+                    grammar.children.append((item_collection, edge))
+
+    def graph_lr0(self, grammar, dot):
+        dot.node(str(grammar), label=str(grammar))
+        for child, edge in grammar.children:
+            self.graph_lr0(child, dot)
+            conn = f'{str(grammar)} - {edge} - {str(child)}'
+            if conn not in self.connected:
+                self.connected.append(conn)
+                dot.edge(str(grammar), str(child), label=edge)
 
     def build_lr0(self):
         dot = graphviz.Digraph()
         self.grammar.extend()
         self.grammar.closure()
-        dot.node(self.grammar.label, label=str(self.grammar))
+        #dot.node(self.grammar.label, label=str(self.grammar))
         self.closure(dot, self.grammar)
+        self.graph_lr0(self.grammar, dot)
         dot.render("renders/lr0", format='png')
 
 
