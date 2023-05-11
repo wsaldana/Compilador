@@ -60,6 +60,12 @@ class Grammar:
     def keys(self):
         return [nt.label for nt in self.non_terminals]
 
+    def __contains__(self, value):
+        for nt in self.non_terminals:
+            if str(nt) == str(value):
+                return True
+        return False
+
 
 class NonTerminal:
     def __init__(self, label):
@@ -211,6 +217,18 @@ class Yapar:
                                 new_nt = NonTerminal(label=nt.label)
                                 new_nt.productions.append(' '.join(tks1))
                                 item_collection.append(new_nt)
+
+                                index_dot = tks1.index(".")
+                                if (tks1[-1] != '.') and tks1[index_dot + 1] in [_nt.label for _nt in grammar.non_terminals]:
+                                    _edge = tks1[index_dot + 1]
+                                    for nt in grammar.non_terminals:
+                                        for prod in nt.productions:
+                                            if _edge in prod:
+                                                tks1 = self.shift_closure(prod)
+                                                new_nt = NonTerminal(label=nt.label)
+                                                new_nt.productions.append(' '.join(tks1))
+                                                if new_nt not in item_collection:
+                                                    item_collection.append(new_nt)
 
                                 if tks1[-1] != '.' and edge not in grammar._edges:
                                     grammar._edges.append(edge)
