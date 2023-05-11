@@ -202,7 +202,9 @@ class Yapar:
                         for prod in nt.productions:
                             if edge in prod:
                                 tks1 = self.shift_closure(prod)
-                                item_collection.append(' '.join(tks1))
+                                new_nt = NonTerminal(label=nt.label)
+                                new_nt.productions.append(' '.join(tks1))
+                                item_collection.append(new_nt)
                     dot.node(str(item_collection), str(item_collection))
                     dot.edge(str(grammar), str(item_collection), label=edge)
 
