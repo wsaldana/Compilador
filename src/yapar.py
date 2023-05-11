@@ -7,6 +7,7 @@ class Grammar:
     def __init__(self, label='0'):
         self.non_terminals = []
         self.label = label
+        self._edges = []
 
     def __getitem__(self, key):
         for nt in self.non_terminals:
@@ -80,6 +81,7 @@ class Yapar:
         self.grammar = Grammar()
         self.ignored = []
         self.yalex_tokens = yalex_tokens
+        self.nodes = {}
 
     def read(self, file_name):
         prods = False
@@ -198,11 +200,9 @@ class Yapar:
                         continue
                     else:
                         done.append(edge)
-                    item_collection = Grammar()
-                    # Jalar las producciones que tengan edge (la produccion antes del punto) dentro
                     node_id = str(uuid.uuid4())
-                    dot.node(node_id, label="x")
-                    dot.edge(grammar.label, node_id, label=edge)
+                    item_collection = Grammar(label=node_id)
+                    # Jalar las producciones que tengan edge (la produccion antes del punto) dentro
                     for nt in grammar.non_terminals:
                         for prod in nt.productions:
                             if edge in prod:
@@ -210,7 +210,13 @@ class Yapar:
                                 new_nt = NonTerminal(label=nt.label)
                                 new_nt.productions.append(' '.join(tks1))
                                 item_collection.append(new_nt)
+
+                                if tks1[-1] != '.' and edge not in grammar._edges:
+                                    grammar._edges.append(edge)
+                                    self.closure(dot, item_collection)
+
                     dot.node(node_id, label=str(item_collection))
+                    dot.edge(grammar.label, node_id, label=edge)
 
     def build_lr0(self):
         dot = graphviz.Digraph()
